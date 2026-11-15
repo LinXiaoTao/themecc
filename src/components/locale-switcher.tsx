@@ -1,7 +1,8 @@
 "use client";
 
+import NextLink from "next/link";
 import { useLocale } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { getPathname, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
 const LABELS: Record<string, string> = {
@@ -19,10 +20,9 @@ export function LocaleSwitcher({ label }: Props) {
   return (
     <nav aria-label={label} className="flex items-center gap-1 text-sm">
       {routing.locales.map((locale) => (
-        <Link
+        <NextLink
           key={locale}
-          href={pathname}
-          locale={locale}
+          href={getPathname({ href: pathname, locale })}
           hrefLang={locale === "zh" ? "zh-Hans" : locale}
           lang={locale}
           aria-current={locale === current ? "true" : undefined}
@@ -33,7 +33,7 @@ export function LocaleSwitcher({ label }: Props) {
           }
         >
           {LABELS[locale] ?? locale}
-        </Link>
+        </NextLink>
       ))}
     </nav>
   );

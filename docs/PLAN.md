@@ -124,12 +124,12 @@ CLI 主题 `registry/cli/<slug>/theme.json` 使用 Claude Code 官方格式 `{ n
 
 ### 环境变量
 
-| 名称                     | 用途                    | 是否公开 |
-| ------------------------ | ----------------------- | -------- |
-| `NEXT_PUBLIC_SITE_URL`   | canonical、sitemap      | 是       |
-| `NEXT_PUBLIC_GA_ID`      | GA4                     | 是       |
-| `NEXT_PUBLIC_GSC_TOKEN`  | Search Console 验证标签 | 是       |
-| `NEXT_PUBLIC_BING_TOKEN` | Bing 验证标签           | 是       |
+| 名称                                   | 用途                                                                     | 是否公开 |
+| -------------------------------------- | ------------------------------------------------------------------------ | -------- |
+| `NEXT_PUBLIC_SITE_URL`                 | canonical、sitemap                                                       | 是       |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID`        | GA4(仅在 Vercel 生产环境设置,不写进代码,避免本地构建和 CI 的流量进入 GA) | 是       |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Search Console 验证标签                                                  | 是       |
+| `NEXT_PUBLIC_BING_SITE_VERIFICATION`   | Bing 验证标签                                                            | 是       |
 
 CI 使用 GitHub 内置 `GITHUB_TOKEN`,不新增密钥。
 

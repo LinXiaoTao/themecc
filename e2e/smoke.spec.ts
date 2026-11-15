@@ -47,6 +47,21 @@ test.describe("i18n", () => {
     await expect(page.getByRole("heading", { level: 1 })).toContainText("CLI");
   });
 
+  test("does not link to the redirecting /en prefix", async ({ page }) => {
+    for (const path of ["/", "/zh", "/cli", "/themes/nord"]) {
+      await page.goto(path);
+      const hrefs = await page
+        .locator("a[href]")
+        .evaluateAll((links) =>
+          links.map((link) => link.getAttribute("href") ?? ""),
+        );
+      const prefixed = hrefs.filter(
+        (href) => href === "/en" || href.startsWith("/en/"),
+      );
+      expect(prefixed, path).toEqual([]);
+    }
+  });
+
   test("declares hreflang alternates and a canonical URL", async ({ page }) => {
     await page.goto("/zh/guides");
     const alternates = await page
