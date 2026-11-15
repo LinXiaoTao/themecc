@@ -1,0 +1,14 @@
+{
+  "name": "cli-selenized-light",
+  "description": "Selenized Light: a blue accent and slate text on a warm cream background.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/selenized-light",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

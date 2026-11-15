@@ -1,0 +1,14 @@
+{
+  "name": "cli-oxblood",
+  "description": "A burnt orange accent with warm pink-white text on a dark red-brown base.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/oxblood",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Themes for Claude",
+  "description": {
+    "en": "A bundle of 12 live ASCII wallpapers, such as Moonlit, Koi Pond, Neon Rain, and Sakura Dusk, plus 5 color themes, picked from a strip above the prompt.",
+    "zh": "包含 12 个实时 ASCII 动画壁纸(如 Moonlit、Koi Pond、Neon Rain、Sakura Dusk)和 5 个配色主题,在输入框上方的选择条里切换。"
+  },
+  "usage": {
+    "en": "Run /themes in a Claude Code session in Claude Desktop and press Install extension. It sets the REACT_PROFILE=1 environment variable and, on macOS, adds a LaunchAgent. Restart Claude Desktop, then pick a theme.",
+    "zh": "在 Claude Desktop 的 Claude Code 会话中运行 /themes,点击 Install extension。它会设置 REACT_PROFILE=1 环境变量,macOS 上还会添加 LaunchAgent。重启 Claude Desktop 后再选择主题。"
+  },
+  "author": {
+    "github": "0toshigami"
+  },
+  "license": "MIT",
+  "source": {
+    "repo": "0toshigami/claude-desktop-themes",
+    "sha": "1ac84ea764028dd1be6f8bc808ca18b622bcad2a"
+  },
+  "plugin": "themes-for-claude",
+  "minClaudeCode": "2.1.324",
+  "colorScheme": ["light", "dark"],
+  "motion": true,
+  "tags": ["ascii", "wallpaper", "animated", "bundle"],
+  "permissions": {
+    "network": false,
+    "files": true,
+    "commands": true
+  },
+  "preview": {
+    "poster": "poster.webp",
+    "video": "preview.mp4"
+  },
+  "addedAt": "2026-11-15"
+}

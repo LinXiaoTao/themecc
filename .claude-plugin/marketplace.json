@@ -55,6 +55,79 @@
       ]
     },
     {
+      "name": "cli-ayu-light",
+      "source": "./plugins/cli-ayu-light",
+      "description": "The Ayu Light variant: a clear blue accent with green success and soft red errors on a light base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "ayu",
+        "blue",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-ayu-mirage",
+      "source": "./plugins/cli-ayu-mirage",
+      "description": "The medium-dark Ayu Mirage variant: a light blue accent with lime success and coral errors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "ayu",
+        "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-bong",
+      "source": "./plugins/cli-bong",
+      "description": "A warm sand accent with sage green success and teal plan mode, on a dark brown base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "sand",
+        "warm",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-campbell",
+      "source": "./plugins/cli-campbell",
+      "description": "The Campbell color scheme from Windows Terminal: a royal blue accent with the classic ANSI green, red, and yellow.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "campbell",
+        "windows-terminal",
+        "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-carbonfox",
+      "source": "./plugins/cli-carbonfox",
+      "description": "The Carbonfox scheme: a bright blue accent with pink errors and near-black neutral backgrounds.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "nightfox",
+        "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-catppuccin-frappe",
+      "source": "./plugins/cli-catppuccin-frappe",
+      "description": "The Frappé flavor of Catppuccin: a pastel blue accent on a mid-tone blue-gray base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "catppuccin",
+        "pastel",
+        "dark"
+      ]
+    },
+    {
       "name": "cli-catppuccin-latte",
       "source": "./plugins/cli-catppuccin-latte",
       "description": "The light Catppuccin flavor, with pastel accents tuned for a white terminal.",
@@ -64,6 +137,18 @@
         "catppuccin",
         "pastel",
         "light"
+      ]
+    },
+    {
+      "name": "cli-catppuccin-macchiato",
+      "source": "./plugins/cli-catppuccin-macchiato",
+      "description": "The Macchiato flavor of Catppuccin: a pastel blue accent, between Frappé and Mocha in darkness.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "catppuccin",
+        "pastel",
+        "dark"
       ]
     },
     {
@@ -91,6 +176,30 @@
       ]
     },
     {
+      "name": "cli-cyberpunk",
+      "source": "./plugins/cli-cyberpunk",
+      "description": "A cyan accent with acid green success, magenta errors, and yellow warnings on a deep navy base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "cyberpunk",
+        "neon",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-dawnfox",
+      "source": "./plugins/cli-dawnfox",
+      "description": "The light Dawnfox scheme: a teal-blue accent and plum text on a warm pink-beige background.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "nightfox",
+        "light",
+        "warm"
+      ]
+    },
+    {
       "name": "cli-daybreak",
       "source": "./plugins/cli-daybreak",
       "description": "A light theme with a calm teal accent and earthy status colors, easy on the eyes in daylight.",
@@ -115,6 +224,42 @@
       ]
     },
     {
+      "name": "cli-driftwood",
+      "source": "./plugins/cli-driftwood",
+      "description": "A muted teal accent with soft cream text, like weathered wood and sea glass.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "teal",
+        "muted",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-eclipse",
+      "source": "./plugins/cli-eclipse",
+      "description": "A calm sky-blue accent with teal plan-mode borders and clear green, red, and amber status colors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "blue",
+        "calm",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-eldritch",
+      "source": "./plugins/cli-eldritch",
+      "description": "Eldritch: a bright cyan accent with neon green success and yellow warnings on a dark purple-gray base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "eldritch",
+        "cyan",
+        "dark"
+      ]
+    },
+    {
       "name": "cli-everforest",
       "source": "./plugins/cli-everforest",
       "description": "A soft aqua accent with gentle green, red, and sand status colors from the Everforest palette.",
@@ -123,6 +268,54 @@
         "cli",
         "everforest",
         "green",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-everforest-light",
+      "source": "./plugins/cli-everforest-light",
+      "description": "The light Everforest scheme: a sky-blue accent and slate text on a soft cream-green background.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "everforest",
+        "green",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-flexoki-dark",
+      "source": "./plugins/cli-flexoki-dark",
+      "description": "Flexoki's dark scheme: warm paper-like text, a blue accent, and inky status colors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "flexoki",
+        "warm",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-flexoki-light",
+      "source": "./plugins/cli-flexoki-light",
+      "description": "Flexoki's light scheme: ink-colored text on warm paper, with a deep blue accent.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "flexoki",
+        "warm",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-forge-ember",
+      "source": "./plugins/cli-forge-ember",
+      "description": "Glowing amber and orange accents with a cream text color, like embers in a forge.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "orange",
+        "warm",
         "dark"
       ]
     },
@@ -151,6 +344,44 @@
       ]
     },
     {
+      "name": "cli-github-dark-colorblind",
+      "source": "./plugins/cli-github-dark-colorblind",
+      "description": "GitHub's colorblind-friendly dark scheme: blue for success and orange for errors instead of green and red.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "github",
+        "accessibility",
+        "colorblind",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-github-dark-dimmed",
+      "source": "./plugins/cli-github-dark-dimmed",
+      "description": "GitHub's dimmed dark scheme: a softer blue accent and lower contrast than GitHub Dark.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "github",
+        "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-github-dark-high-contrast",
+      "source": "./plugins/cli-github-dark-high-contrast",
+      "description": "GitHub's high-contrast dark scheme: brighter blue, green, red, and yellow for readability.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "github",
+        "high-contrast",
+        "accessibility",
+        "dark"
+      ]
+    },
+    {
       "name": "cli-github-light",
       "source": "./plugins/cli-github-light",
       "description": "The GitHub light palette, with the familiar blue accent and readable status colors on white.",
@@ -160,6 +391,32 @@
         "github",
         "neutral",
         "light"
+      ]
+    },
+    {
+      "name": "cli-graphite",
+      "source": "./plugins/cli-graphite",
+      "description": "A restrained steel-blue accent on a neutral gray base with desaturated status colors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "gray",
+        "minimal",
+        "muted",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-green-phosphor",
+      "source": "./plugins/cli-green-phosphor",
+      "description": "A monochrome green phosphor look, like a classic CRT terminal. Almost every color is a shade of green.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "retro",
+        "crt",
+        "green",
+        "dark"
       ]
     },
     {
@@ -175,6 +432,55 @@
       ]
     },
     {
+      "name": "cli-gruvbox-dark-hard",
+      "source": "./plugins/cli-gruvbox-dark-hard",
+      "description": "The hard-contrast Gruvbox Dark variant: a yellow accent with bright green, red, and cream text on a very dark base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "gruvbox",
+        "yellow",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-gruvbox-material-dark",
+      "source": "./plugins/cli-gruvbox-material-dark",
+      "description": "A softer take on Gruvbox with an aqua accent, sage green success, and warm cream text.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "gruvbox",
+        "soft",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-gruvbox-material-light",
+      "source": "./plugins/cli-gruvbox-material-light",
+      "description": "The light Gruvbox Material scheme: a teal accent and brown text on a warm cream background.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "gruvbox",
+        "soft",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-halcyon",
+      "source": "./plugins/cli-halcyon",
+      "description": "A soft periwinkle accent with muted pink errors and sage success colors, based on Halcyon.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "halcyon",
+        "purple",
+        "soft",
+        "dark"
+      ]
+    },
+    {
       "name": "cli-high-contrast",
       "source": "./plugins/cli-high-contrast",
       "description": "Pure white text and bright, saturated accents on the dark preset, for maximum readability.",
@@ -183,6 +489,18 @@
         "cli",
         "high-contrast",
         "accessibility",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-horizon",
+      "source": "./plugins/cli-horizon",
+      "description": "A cyan accent with coral-pink errors and peach warnings on a dark base, based on Horizon.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "horizon",
+        "cyan",
         "dark"
       ]
     },
@@ -202,6 +520,18 @@
       "name": "cli-kanagawa",
       "source": "./plugins/cli-kanagawa",
       "description": "Muted ink-blue and wave colors inspired by Hokusai's The Great Wave off Kanagawa.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "kanagawa",
+        "muted",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-kanagawa-dragon",
+      "source": "./plugins/cli-kanagawa-dragon",
+      "description": "The darker Dragon variant of Kanagawa, with a pale blue-gray accent and muted earthy status colors.",
       "license": "MIT",
       "tags": [
         "cli",
@@ -235,6 +565,67 @@
       ]
     },
     {
+      "name": "cli-miami-heat",
+      "source": "./plugins/cli-miami-heat",
+      "description": "Hot pink errors, aqua accents, and a pale pink text color, inspired by 1980s Miami.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "neon",
+        "retro",
+        "pink",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-nebula-drift",
+      "source": "./plugins/cli-nebula-drift",
+      "description": "A periwinkle accent with pink-red errors and mint success, on a deep indigo base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "space",
+        "indigo",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-neon",
+      "source": "./plugins/cli-neon",
+      "description": "An original high-contrast neon palette: orange accent, neon green text and success, and bright red errors over near-black.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "neon",
+        "high-contrast",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-night-owl",
+      "source": "./plugins/cli-night-owl",
+      "description": "A deep blue theme with a periwinkle accent and green success, based on Night Owl.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "night-owl",
+        "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-nightfox",
+      "source": "./plugins/cli-nightfox",
+      "description": "The Nightfox scheme: a steady blue accent with soft green, rose, and gold status colors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "nightfox",
+        "blue",
+        "dark"
+      ]
+    },
+    {
       "name": "cli-nord",
       "source": "./plugins/cli-nord",
       "description": "Cool arctic blues and muted frost tones on a dark base, ported from the Nord palette.",
@@ -243,6 +634,79 @@
         "cli",
         "nord",
         "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-one-dark",
+      "source": "./plugins/cli-one-dark",
+      "description": "The familiar Atom One Dark colors: a soft blue accent with green, red, and amber status colors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "one-dark",
+        "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-opaline",
+      "source": "./plugins/cli-opaline",
+      "description": "A pearly blue accent with soft mint success and peach warnings on a muted indigo base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "blue",
+        "soft",
+        "pastel",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-oxblood",
+      "source": "./plugins/cli-oxblood",
+      "description": "A burnt orange accent with warm pink-white text on a dark red-brown base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "red",
+        "warm",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-oxocarbon",
+      "source": "./plugins/cli-oxocarbon",
+      "description": "IBM Carbon-style colors: a bright blue accent, mint green success, and pink errors on a dark base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "oxocarbon",
+        "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-oxocarbon-light",
+      "source": "./plugins/cli-oxocarbon-light",
+      "description": "The light Oxocarbon scheme: a vivid IBM blue accent with slate text on a cool gray background.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "oxocarbon",
+        "blue",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-patina",
+      "source": "./plugins/cli-patina",
+      "description": "A copper-green accent with sage success and a deep green-gray base, like oxidized bronze.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "green",
+        "teal",
         "dark"
       ]
     },
@@ -256,6 +720,18 @@
         "blue",
         "clean",
         "light"
+      ]
+    },
+    {
+      "name": "cli-prism",
+      "source": "./plugins/cli-prism",
+      "description": "A bright blue accent with cyan plan mode and well-separated pink, mint, and yellow status colors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "blue",
+        "vivid",
+        "dark"
       ]
     },
     {
@@ -279,6 +755,42 @@
         "cli",
         "rose-pine",
         "muted",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-rose-pine-moon",
+      "source": "./plugins/cli-rose-pine-moon",
+      "description": "The Moon variant of Rosé Pine: a soft iris accent with rose errors on a dusky purple base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "rose-pine",
+        "purple",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-selenized-dark",
+      "source": "./plugins/cli-selenized-dark",
+      "description": "Selenized Dark: a blue accent on a teal-tinted base, with colors designed for even perceived contrast.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "selenized",
+        "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-selenized-light",
+      "source": "./plugins/cli-selenized-light",
+      "description": "Selenized Light: a blue accent and slate text on a warm cream background.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "selenized",
+        "blue",
         "light"
       ]
     },
@@ -307,6 +819,31 @@
       ]
     },
     {
+      "name": "cli-synthwave",
+      "source": "./plugins/cli-synthwave",
+      "description": "Electric cyan accents with hot pink-red errors and neon yellow warnings, in the style of Synthwave '84.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "synthwave",
+        "neon",
+        "retro",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-terafox",
+      "source": "./plugins/cli-terafox",
+      "description": "The Terafox scheme: a muted teal-blue accent with coral errors on a deep green-teal base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "nightfox",
+        "teal",
+        "dark"
+      ]
+    },
+    {
       "name": "cli-tokyo-night",
       "source": "./plugins/cli-tokyo-night",
       "description": "A soft blue accent with green success and pink-red error colors, from the Tokyo Night palette.",
@@ -315,6 +852,42 @@
         "cli",
         "tokyo-night",
         "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-velvet-court",
+      "source": "./plugins/cli-velvet-court",
+      "description": "A lavender accent with rose pink text and plum backgrounds, like a velvet curtain.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "purple",
+        "plum",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-verdigris",
+      "source": "./plugins/cli-verdigris",
+      "description": "A blue-green accent with parchment text on a dark forest base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "green",
+        "teal",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-vesper",
+      "source": "./plugins/cli-vesper",
+      "description": "Vesper: a muted sage accent with peach warnings and gray text on a near-black base.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "vesper",
+        "minimal",
         "dark"
       ]
     },
@@ -367,6 +940,23 @@
         "halftone",
         "animated",
         "cozy"
+      ]
+    },
+    {
+      "name": "themes-for-claude",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/0toshigami/claude-desktop-themes.git",
+        "sha": "1ac84ea764028dd1be6f8bc808ca18b622bcad2a"
+      },
+      "description": "A bundle of 12 live ASCII wallpapers, such as Moonlit, Koi Pond, Neon Rain, and Sakura Dusk, plus 5 color themes, picked from a strip above the prompt.",
+      "license": "MIT",
+      "tags": [
+        "desktop",
+        "ascii",
+        "wallpaper",
+        "animated",
+        "bundle"
       ]
     }
   ]

@@ -1,0 +1,14 @@
+{
+  "name": "cli-flexoki-dark",
+  "description": "Flexoki's dark scheme: warm paper-like text, a blue accent, and inky status colors.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/flexoki-dark",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

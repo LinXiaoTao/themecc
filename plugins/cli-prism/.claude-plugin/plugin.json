@@ -1,0 +1,14 @@
+{
+  "name": "cli-prism",
+  "description": "A bright blue accent with cyan plan mode and well-separated pink, mint, and yellow status colors.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/prism",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

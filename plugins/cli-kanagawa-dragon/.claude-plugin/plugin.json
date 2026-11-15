@@ -1,0 +1,14 @@
+{
+  "name": "cli-kanagawa-dragon",
+  "description": "The darker Dragon variant of Kanagawa, with a pale blue-gray accent and muted earthy status colors.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/kanagawa-dragon",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

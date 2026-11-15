@@ -1,0 +1,14 @@
+{
+  "name": "cli-rose-pine-moon",
+  "description": "The Moon variant of Rosé Pine: a soft iris accent with rose errors on a dusky purple base.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/rose-pine-moon",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

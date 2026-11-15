@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The familiar Atom One Dark colors: a soft blue accent with green, red, and amber status colors.",
+    "zh": "熟悉的 Atom One Dark 配色:柔和的蓝色强调色,搭配绿、红、琥珀色状态色。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: One Dark.",
+  "upstream": "https://github.com/atom/one-dark-syntax",
+  "tags": ["one-dark", "blue", "dark"],
+  "addedAt": "2026-11-15"
+}

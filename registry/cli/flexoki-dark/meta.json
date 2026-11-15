@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Flexoki's dark scheme: warm paper-like text, a blue accent, and inky status colors.",
+    "zh": "Flexoki 的深色方案:温暖的纸张色文字,蓝色强调色,墨水般的状态色。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Flexoki.",
+  "upstream": "https://github.com/kepano/flexoki",
+  "tags": ["flexoki", "warm", "dark"],
+  "addedAt": "2026-11-15"
+}

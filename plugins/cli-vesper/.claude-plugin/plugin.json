@@ -1,0 +1,14 @@
+{
+  "name": "cli-vesper",
+  "description": "Vesper: a muted sage accent with peach warnings and gray text on a near-black base.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/vesper",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

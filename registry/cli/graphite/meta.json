@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A restrained steel-blue accent on a neutral gray base with desaturated status colors.",
+    "zh": "克制的钢蓝色强调色,基于中性灰色底,状态色饱和度较低。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["gray", "minimal", "muted", "dark"],
+  "addedAt": "2026-11-15"
+}

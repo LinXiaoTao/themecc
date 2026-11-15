@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A pearly blue accent with soft mint success and peach warnings on a muted indigo base.",
+    "zh": "珍珠蓝强调色,搭配柔和的薄荷绿成功色和蜜桃色警告,基于低饱和靛蓝底。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["blue", "soft", "pastel", "dark"],
+  "addedAt": "2026-11-15"
+}

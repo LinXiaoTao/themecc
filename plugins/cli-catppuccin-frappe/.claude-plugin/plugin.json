@@ -1,0 +1,14 @@
+{
+  "name": "cli-catppuccin-frappe",
+  "description": "The Frappé flavor of Catppuccin: a pastel blue accent on a mid-tone blue-gray base.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/catppuccin-frappe",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

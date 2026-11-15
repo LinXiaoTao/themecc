@@ -1,0 +1,14 @@
+{
+  "name": "cli-flexoki-light",
+  "description": "Flexoki's light scheme: ink-colored text on warm paper, with a deep blue accent.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/flexoki-light",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

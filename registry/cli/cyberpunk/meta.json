@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A cyan accent with acid green success, magenta errors, and yellow warnings on a deep navy base.",
+    "zh": "青色强调色,搭配酸性绿成功色、品红错误色和黄色警告,基于深海军蓝底。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["cyberpunk", "neon", "dark"],
+  "addedAt": "2026-11-15"
+}

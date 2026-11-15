@@ -1,0 +1,14 @@
+{
+  "name": "cli-ayu-mirage",
+  "description": "The medium-dark Ayu Mirage variant: a light blue accent with lime success and coral errors.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/ayu-mirage",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

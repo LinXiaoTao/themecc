@@ -1,0 +1,14 @@
+{
+  "name": "cli-night-owl",
+  "description": "A deep blue theme with a periwinkle accent and green success, based on Night Owl.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/night-owl",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

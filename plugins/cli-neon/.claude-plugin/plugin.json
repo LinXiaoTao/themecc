@@ -1,0 +1,14 @@
+{
+  "name": "cli-neon",
+  "description": "An original high-contrast neon palette: orange accent, neon green text and success, and bright red errors over near-black.",
+  "author": {
+    "name": "TheBabaYaga",
+    "url": "https://github.com/TheBabaYaga"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/neon",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

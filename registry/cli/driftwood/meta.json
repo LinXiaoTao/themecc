@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A muted teal accent with soft cream text, like weathered wood and sea glass.",
+    "zh": "低饱和的青绿色强调色,搭配柔和的奶油色文字,像风化的浮木和海玻璃。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["teal", "muted", "dark"],
+  "addedAt": "2026-11-15"
+}

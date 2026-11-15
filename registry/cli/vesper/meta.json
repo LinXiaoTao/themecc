@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Vesper: a muted sage accent with peach warnings and gray text on a near-black base.",
+    "zh": "Vesper:低饱和的鼠尾草绿强调色,蜜桃色警告,灰色文字,基于近黑底。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Vesper.",
+  "upstream": "https://github.com/raunofreiberg/vesper",
+  "tags": ["vesper", "minimal", "dark"],
+  "addedAt": "2026-11-15"
+}

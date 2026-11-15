@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A bright blue accent with cyan plan mode and well-separated pink, mint, and yellow status colors.",
+    "zh": "明亮的蓝色强调色,计划模式用青色,粉、薄荷绿、黄色状态色区分明显。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["blue", "vivid", "dark"],
+  "addedAt": "2026-11-15"
+}

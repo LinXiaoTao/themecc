@@ -114,7 +114,7 @@ CLI 主题 `registry/cli/<slug>/theme.json` 使用 Claude Code 官方格式 `{ n
 - 不从竞品站点抓取内容。
 - CLI 主题:复制主题 JSON,保留作者、许可证、上游链接和版权声明。
 - 桌面 mod:仅收录链接并固定 sha,不复制源码。激活方式因 mod 而异(`/deep-field`、`/rainy-window on|off` 等),用可选字段 `usage` 记录,没有 `usage` 时显示通用说明。
-- 实际收录:CLI 25 个(`scripts/seed-manifest.ts`,每条保留上游仓库、固定 commit 与版权声明),桌面 3 个(deep-field、firefly-meadow、rainy-window)。
+- 实际收录:CLI 73 个(其中 72 个来自 `scripts/seed-manifest.ts`,每条保留上游仓库、固定 commit 与版权声明;`ink-and-ember` 由 PR #1 投稿),桌面 4 个(deep-field、firefly-meadow、rainy-window、themes-for-claude)。`themes-for-claude` 是整包插件,会设置 `REACT_PROFILE` 环境变量并向 Claude Desktop 的 extensions 目录写入文件,权限标为 files 和 commands。导入来源:livlign/ccthemes、dracula/claude-code-cli、TheBabaYaga/claude-themes、tinted-theming/tinted-claude-code。`seed-registry.ts` 会跳过已存在的 slug。
 - 已排除:0toshigami(行为侵入性强)、theme-examples(固定 commit 下使用的 API 已被移除)、matcra587(无许可证)、一个堆砌「50 dark themes」的重复内容仓库。
 - 3 个种子桌面条目没有 `reviewed` 字段:我只做过表层检查(API 调用检索与 README),不能算人工审核,所以页面显示「尚未经过维护者审核」。`reviewed` 是可选字段,由维护者读完固定 commit 的源码后添加;投稿者不要自己添加。站点文案不再声称每个桌面主题都经过审核。
 - 桌面预览是作者自己的截图或视频,页面注明归作者所有。

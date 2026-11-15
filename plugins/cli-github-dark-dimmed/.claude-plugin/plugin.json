@@ -1,0 +1,14 @@
+{
+  "name": "cli-github-dark-dimmed",
+  "description": "GitHub's dimmed dark scheme: a softer blue accent and lower contrast than GitHub Dark.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/github-dark-dimmed",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "cli-carbonfox",
+  "description": "The Carbonfox scheme: a bright blue accent with pink errors and near-black neutral backgrounds.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/carbonfox",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The light Gruvbox Material scheme: a teal accent and brown text on a warm cream background.",
+    "zh": "浅色的 Gruvbox Material 配色:青绿色强调色,棕色文字,暖奶油色背景。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Gruvbox Material.",
+  "upstream": "https://github.com/sainnhe/gruvbox-material",
+  "tags": ["gruvbox", "soft", "light"],
+  "addedAt": "2026-11-15"
+}

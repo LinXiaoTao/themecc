@@ -1,0 +1,14 @@
+{
+  "name": "cli-gruvbox-dark-hard",
+  "description": "The hard-contrast Gruvbox Dark variant: a yellow accent with bright green, red, and cream text on a very dark base.",
+  "author": {
+    "name": "TheBabaYaga",
+    "url": "https://github.com/TheBabaYaga"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/gruvbox-dark-hard",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

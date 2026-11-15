@@ -1,0 +1,14 @@
+{
+  "name": "cli-dawnfox",
+  "description": "The light Dawnfox scheme: a teal-blue accent and plum text on a warm pink-beige background.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/dawnfox",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

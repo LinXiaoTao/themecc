@@ -1,0 +1,14 @@
+{
+  "name": "cli-catppuccin-macchiato",
+  "description": "The Macchiato flavor of Catppuccin: a pastel blue accent, between Frappé and Mocha in darkness.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/catppuccin-macchiato",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

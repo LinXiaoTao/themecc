@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The Terafox scheme: a muted teal-blue accent with coral errors on a deep green-teal base.",
+    "zh": "Terafox 配色:低饱和的青蓝色强调色,珊瑚色错误,基于深青绿底。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Nightfox.",
+  "upstream": "https://github.com/EdenEast/nightfox.nvim",
+  "tags": ["nightfox", "teal", "dark"],
+  "addedAt": "2026-11-15"
+}

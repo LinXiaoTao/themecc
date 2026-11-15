@@ -1,0 +1,14 @@
+{
+  "name": "cli-oxocarbon",
+  "description": "IBM Carbon-style colors: a bright blue accent, mint green success, and pink errors on a dark base.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/oxocarbon",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

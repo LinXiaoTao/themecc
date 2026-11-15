@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A periwinkle accent with pink-red errors and mint success, on a deep indigo base.",
+    "zh": "长春花蓝强调色,搭配粉红色错误和薄荷绿成功色,基于深靛蓝底。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["space", "indigo", "dark"],
+  "addedAt": "2026-11-15"
+}

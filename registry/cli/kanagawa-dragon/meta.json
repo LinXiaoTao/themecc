@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The darker Dragon variant of Kanagawa, with a pale blue-gray accent and muted earthy status colors.",
+    "zh": "Kanagawa 更暗的 Dragon 版本,淡蓝灰色强调色,状态色偏大地色且低饱和。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Kanagawa.",
+  "upstream": "https://github.com/rebelot/kanagawa.nvim",
+  "tags": ["kanagawa", "muted", "dark"],
+  "addedAt": "2026-11-15"
+}

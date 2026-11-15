@@ -1,0 +1,14 @@
+{
+  "name": "cli-graphite",
+  "description": "A restrained steel-blue accent on a neutral gray base with desaturated status colors.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/graphite",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

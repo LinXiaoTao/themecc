@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Glowing amber and orange accents with a cream text color, like embers in a forge.",
+    "zh": "炽热的琥珀色和橙色强调色,搭配奶油色文字,像锻炉里的余烬。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["orange", "warm", "dark"],
+  "addedAt": "2026-11-15"
+}

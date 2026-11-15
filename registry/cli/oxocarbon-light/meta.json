@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The light Oxocarbon scheme: a vivid IBM blue accent with slate text on a cool gray background.",
+    "zh": "浅色的 Oxocarbon 配色:鲜明的 IBM 蓝强调色,石板灰文字,冷灰色背景。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Oxocarbon.",
+  "upstream": "https://github.com/nyoom-engineering/oxocarbon",
+  "tags": ["oxocarbon", "blue", "light"],
+  "addedAt": "2026-11-15"
+}

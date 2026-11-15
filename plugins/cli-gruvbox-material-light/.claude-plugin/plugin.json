@@ -1,0 +1,14 @@
+{
+  "name": "cli-gruvbox-material-light",
+  "description": "The light Gruvbox Material scheme: a teal accent and brown text on a warm cream background.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/gruvbox-material-light",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

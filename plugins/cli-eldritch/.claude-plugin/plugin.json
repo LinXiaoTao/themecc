@@ -1,0 +1,14 @@
+{
+  "name": "cli-eldritch",
+  "description": "Eldritch: a bright cyan accent with neon green success and yellow warnings on a dark purple-gray base.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/eldritch",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

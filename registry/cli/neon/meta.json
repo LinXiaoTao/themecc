@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "An original high-contrast neon palette: orange accent, neon green text and success, and bright red errors over near-black.",
+    "zh": "原创的高对比度霓虹配色:橙色强调色,霓虹绿文字和成功色,亮红色错误,基于近黑底。"
+  },
+  "author": {
+    "name": "TheBabaYaga",
+    "github": "TheBabaYaga"
+  },
+  "license": "MIT",
+  "attribution": "Copied from TheBabaYaga/claude-themes at 4893623 (MIT, Copyright (c) 2026 Kevin T'Syen).",
+  "upstream": "https://github.com/TheBabaYaga/claude-themes",
+  "tags": ["neon", "high-contrast", "dark"],
+  "addedAt": "2026-11-15"
+}

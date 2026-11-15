@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A deep blue theme with a periwinkle accent and green success, based on Night Owl.",
+    "zh": "深蓝色主题,长春花蓝强调色搭配绿色成功色,基于 Night Owl。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Night Owl.",
+  "upstream": "https://github.com/sdras/night-owl-vscode-theme",
+  "tags": ["night-owl", "blue", "dark"],
+  "addedAt": "2026-11-15"
+}

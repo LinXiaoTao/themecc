@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The Carbonfox scheme: a bright blue accent with pink errors and near-black neutral backgrounds.",
+    "zh": "Carbonfox 配色:亮蓝色强调色,粉色错误,中性的近黑背景。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Nightfox.",
+  "upstream": "https://github.com/EdenEast/nightfox.nvim",
+  "tags": ["nightfox", "blue", "dark"],
+  "addedAt": "2026-11-15"
+}

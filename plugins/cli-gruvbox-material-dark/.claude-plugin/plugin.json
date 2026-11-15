@@ -1,0 +1,14 @@
+{
+  "name": "cli-gruvbox-material-dark",
+  "description": "A softer take on Gruvbox with an aqua accent, sage green success, and warm cream text.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/gruvbox-material-dark",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

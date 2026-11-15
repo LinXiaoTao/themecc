@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Electric cyan accents with hot pink-red errors and neon yellow warnings, in the style of Synthwave '84.",
+    "zh": "电光青色强调色,搭配玫红色错误和霓虹黄色警告,风格来自 Synthwave '84。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Synthwave '84.",
+  "upstream": "https://github.com/robb0wen/synthwave-vscode",
+  "tags": ["synthwave", "neon", "retro", "dark"],
+  "addedAt": "2026-11-15"
+}

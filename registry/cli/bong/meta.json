@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A warm sand accent with sage green success and teal plan mode, on a dark brown base.",
+    "zh": "暖沙色强调色,搭配鼠尾草绿成功色和青绿色计划模式,基于深棕色底。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["sand", "warm", "dark"],
+  "addedAt": "2026-11-15"
+}

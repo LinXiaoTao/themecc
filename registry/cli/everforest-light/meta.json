@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The light Everforest scheme: a sky-blue accent and slate text on a soft cream-green background.",
+    "zh": "浅色的 Everforest 配色:天蓝色强调色,石板灰文字,柔和的奶油绿背景。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Everforest.",
+  "upstream": "https://github.com/sainnhe/everforest",
+  "tags": ["everforest", "green", "light"],
+  "addedAt": "2026-11-15"
+}

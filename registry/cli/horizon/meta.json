@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A cyan accent with coral-pink errors and peach warnings on a dark base, based on Horizon.",
+    "zh": "青色强调色,搭配珊瑚粉色错误和蜜桃色警告,基于 Horizon 的深色版本。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Horizon.",
+  "upstream": "https://github.com/jolaleye/horizon-theme-vscode",
+  "tags": ["horizon", "cyan", "dark"],
+  "addedAt": "2026-11-15"
+}

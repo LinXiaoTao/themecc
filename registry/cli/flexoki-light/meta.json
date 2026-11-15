@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Flexoki's light scheme: ink-colored text on warm paper, with a deep blue accent.",
+    "zh": "Flexoki 的浅色方案:暖纸色背景上的墨色文字,深蓝色强调色。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Flexoki.",
+  "upstream": "https://github.com/kepano/flexoki",
+  "tags": ["flexoki", "warm", "light"],
+  "addedAt": "2026-11-15"
+}

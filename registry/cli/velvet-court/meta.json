@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A lavender accent with rose pink text and plum backgrounds, like a velvet curtain.",
+    "zh": "薰衣草紫强调色,搭配玫瑰粉文字和李子紫背景,像天鹅绒幕布。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["purple", "plum", "dark"],
+  "addedAt": "2026-11-15"
+}

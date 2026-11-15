@@ -1,0 +1,14 @@
+{
+  "name": "cli-verdigris",
+  "description": "A blue-green accent with parchment text on a dark forest base.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/verdigris",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

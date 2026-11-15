@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import {
   type CliMetaFile,
@@ -8,9 +8,10 @@ import {
 import { CLI_SEED, type SeedEntry } from "./seed-manifest";
 
 /**
- * One-time import of community CLI themes.
+ * Imports community CLI themes.
  * Each file is fetched at a pinned commit, validated, and written with
- * attribution. Run `pnpm registry:seed`, then `pnpm lint:fix` to format.
+ * attribution. Slugs that already exist in the registry are skipped.
+ * Run `pnpm registry:seed`, then `pnpm lint:fix` to format.
  */
 
 const ADDED_AT = new Date().toISOString().slice(0, 10);
@@ -41,13 +42,18 @@ function buildMeta(entry: SeedEntry): CliMetaFile {
 }
 
 async function importEntry(entry: SeedEntry): Promise<void> {
+  const dir = path.join(process.cwd(), "registry", "cli", entry.slug);
+  if (existsSync(dir)) {
+    console.log(`skip ${entry.slug} (already in the registry)`);
+    return;
+  }
   const response = await fetch(rawUrl(entry));
   if (!response.ok) {
     throw new Error(`${entry.slug}: ${response.status} for ${rawUrl(entry)}`);
   }
-  const theme = cliThemeFileSchema.parse(await response.json());
+  const parsed = cliThemeFileSchema.parse(await response.json());
+  const theme = entry.name ? { ...parsed, name: entry.name } : parsed;
   const meta = buildMeta(entry);
-  const dir = path.join(process.cwd(), "registry", "cli", entry.slug);
   mkdirSync(dir, { recursive: true });
   writeFileSync(
     path.join(dir, "theme.json"),

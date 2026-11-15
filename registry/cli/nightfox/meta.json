@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The Nightfox scheme: a steady blue accent with soft green, rose, and gold status colors.",
+    "zh": "Nightfox 配色:沉稳的蓝色强调色,搭配柔和的绿、玫红、金色状态色。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Nightfox.",
+  "upstream": "https://github.com/EdenEast/nightfox.nvim",
+  "tags": ["nightfox", "blue", "dark"],
+  "addedAt": "2026-11-15"
+}

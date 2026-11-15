@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The Campbell color scheme from Windows Terminal: a royal blue accent with the classic ANSI green, red, and yellow.",
+    "zh": "来自 Windows Terminal 的 Campbell 配色:宝蓝色强调色,搭配经典 ANSI 绿、红、黄。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Campbell.",
+  "upstream": "https://github.com/microsoft/terminal",
+  "tags": ["campbell", "windows-terminal", "blue", "dark"],
+  "addedAt": "2026-11-15"
+}

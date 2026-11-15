@@ -1,0 +1,14 @@
+{
+  "name": "cli-github-dark-high-contrast",
+  "description": "GitHub's high-contrast dark scheme: brighter blue, green, red, and yellow for readability.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/github-dark-high-contrast",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

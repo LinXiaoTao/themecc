@@ -1,0 +1,14 @@
+{
+  "name": "cli-campbell",
+  "description": "The Campbell color scheme from Windows Terminal: a royal blue accent with the classic ANSI green, red, and yellow.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/campbell",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A calm sky-blue accent with teal plan-mode borders and clear green, red, and amber status colors.",
+    "zh": "平静的天蓝色强调色,计划模式边框用青绿色,绿、红、琥珀色状态色清晰易辨。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["blue", "calm", "dark"],
+  "addedAt": "2026-11-15"
+}

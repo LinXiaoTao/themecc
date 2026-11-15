@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A softer take on Gruvbox with an aqua accent, sage green success, and warm cream text.",
+    "zh": "更柔和的 Gruvbox 变体:水绿色强调色,鼠尾草绿成功色,暖奶油色文字。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Gruvbox Material.",
+  "upstream": "https://github.com/sainnhe/gruvbox-material",
+  "tags": ["gruvbox", "soft", "dark"],
+  "addedAt": "2026-11-15"
+}

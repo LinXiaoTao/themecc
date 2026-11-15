@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Selenized Light: a blue accent and slate text on a warm cream background.",
+    "zh": "Selenized Light:蓝色强调色,石板灰文字,暖奶油色背景。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Selenized.",
+  "upstream": "https://github.com/jan-warchol/selenized",
+  "tags": ["selenized", "blue", "light"],
+  "addedAt": "2026-11-15"
+}

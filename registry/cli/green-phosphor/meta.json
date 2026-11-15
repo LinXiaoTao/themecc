@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A monochrome green phosphor look, like a classic CRT terminal. Almost every color is a shade of green.",
+    "zh": "单色绿色荧光屏效果,像经典 CRT 终端。几乎所有颜色都是绿色的深浅变化。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["retro", "crt", "green", "dark"],
+  "addedAt": "2026-11-15"
+}

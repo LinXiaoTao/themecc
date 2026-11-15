@@ -1,0 +1,14 @@
+{
+  "name": "cli-oxocarbon-light",
+  "description": "The light Oxocarbon scheme: a vivid IBM blue accent with slate text on a cool gray background.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/oxocarbon-light",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A blue-green accent with parchment text on a dark forest base.",
+    "zh": "蓝绿色强调色,搭配羊皮纸色文字,基于深森林绿底。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["green", "teal", "dark"],
+  "addedAt": "2026-11-15"
+}

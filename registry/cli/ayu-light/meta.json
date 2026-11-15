@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The Ayu Light variant: a clear blue accent with green success and soft red errors on a light base.",
+    "zh": "Ayu Light 版本:清爽的蓝色强调色,搭配绿色成功色和柔和的红色错误,基于浅色底。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Ayu.",
+  "upstream": "https://github.com/ayu-theme/ayu-colors",
+  "tags": ["ayu", "blue", "light"],
+  "addedAt": "2026-11-15"
+}

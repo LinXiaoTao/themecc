@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The hard-contrast Gruvbox Dark variant: a yellow accent with bright green, red, and cream text on a very dark base.",
+    "zh": "Gruvbox Dark 的 hard 对比度版本:黄色强调色,搭配亮绿色、红色和奶油色文字,基于很深的底色。"
+  },
+  "author": {
+    "name": "TheBabaYaga",
+    "github": "TheBabaYaga"
+  },
+  "license": "MIT",
+  "attribution": "Copied from TheBabaYaga/claude-themes at 4893623 (MIT, Copyright (c) 2026 Kevin T'Syen). Palette: Gruvbox.",
+  "upstream": "https://github.com/morhetz/gruvbox",
+  "tags": ["gruvbox", "yellow", "dark"],
+  "addedAt": "2026-11-15"
+}

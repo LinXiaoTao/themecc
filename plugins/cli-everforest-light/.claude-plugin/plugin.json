@@ -1,0 +1,14 @@
+{
+  "name": "cli-everforest-light",
+  "description": "The light Everforest scheme: a sky-blue accent and slate text on a soft cream-green background.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/everforest-light",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "GitHub's colorblind-friendly dark scheme: blue for success and orange for errors instead of green and red.",
+    "zh": "GitHub 面向色盲用户的深色方案:用蓝色表示成功、橙色表示错误,代替绿色和红色。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: GitHub Primer.",
+  "upstream": "https://github.com/primer/github-vscode-theme",
+  "tags": ["github", "accessibility", "colorblind", "dark"],
+  "addedAt": "2026-11-15"
+}

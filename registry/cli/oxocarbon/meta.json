@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "IBM Carbon-style colors: a bright blue accent, mint green success, and pink errors on a dark base.",
+    "zh": "IBM Carbon 风格配色:亮蓝色强调色,薄荷绿成功色和粉色错误色,基于深色底。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Oxocarbon.",
+  "upstream": "https://github.com/nyoom-engineering/oxocarbon",
+  "tags": ["oxocarbon", "blue", "dark"],
+  "addedAt": "2026-11-15"
+}

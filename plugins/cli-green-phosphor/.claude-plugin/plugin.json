@@ -1,0 +1,14 @@
+{
+  "name": "cli-green-phosphor",
+  "description": "A monochrome green phosphor look, like a classic CRT terminal. Almost every color is a shade of green.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/green-phosphor",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

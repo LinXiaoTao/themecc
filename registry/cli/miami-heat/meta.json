@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Hot pink errors, aqua accents, and a pale pink text color, inspired by 1980s Miami.",
+    "zh": "玫红色错误、水蓝色强调色和淡粉色文字,灵感来自 80 年代的迈阿密。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["neon", "retro", "pink", "dark"],
+  "addedAt": "2026-11-15"
+}

@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Eldritch: a bright cyan accent with neon green success and yellow warnings on a dark purple-gray base.",
+    "zh": "Eldritch:亮青色强调色,搭配霓虹绿成功色和黄色警告,基于深紫灰底。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Eldritch.",
+  "upstream": "https://github.com/eldritch-theme/eldritch",
+  "tags": ["eldritch", "cyan", "dark"],
+  "addedAt": "2026-11-15"
+}

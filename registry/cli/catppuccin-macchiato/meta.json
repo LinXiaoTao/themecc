@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The Macchiato flavor of Catppuccin: a pastel blue accent, between Frappé and Mocha in darkness.",
+    "zh": "Catppuccin 的 Macchiato 版本:粉彩蓝色强调色,深浅介于 Frappé 和 Mocha 之间。"
+  },
+  "author": {
+    "name": "Tinted Theming",
+    "github": "tinted-theming"
+  },
+  "license": "MIT",
+  "attribution": "Copied from tinted-theming/tinted-claude-code at d63ab03 (MIT, Copyright (c) 2026 Bez Hermoso). Palette: Catppuccin.",
+  "upstream": "https://github.com/catppuccin/catppuccin",
+  "tags": ["catppuccin", "pastel", "dark"],
+  "addedAt": "2026-11-15"
+}

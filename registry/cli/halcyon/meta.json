@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A soft periwinkle accent with muted pink errors and sage success colors, based on Halcyon.",
+    "zh": "柔和的长春花蓝强调色,搭配淡粉色错误和鼠尾草绿成功色,基于 Halcyon。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Halcyon.",
+  "upstream": "https://github.com/bchiang7/halcyon-vscode",
+  "tags": ["halcyon", "purple", "soft", "dark"],
+  "addedAt": "2026-11-15"
+}

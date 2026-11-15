@@ -1,0 +1,14 @@
+{
+  "name": "cli-horizon",
+  "description": "A cyan accent with coral-pink errors and peach warnings on a dark base, based on Horizon.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/horizon",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

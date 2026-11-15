@@ -1,0 +1,14 @@
+{
+  "name": "cli-selenized-dark",
+  "description": "Selenized Dark: a blue accent on a teal-tinted base, with colors designed for even perceived contrast.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/selenized-dark",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

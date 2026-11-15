@@ -1,0 +1,14 @@
+{
+  "name": "cli-github-dark-colorblind",
+  "description": "GitHub's colorblind-friendly dark scheme: blue for success and orange for errors instead of green and red.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/github-dark-colorblind",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

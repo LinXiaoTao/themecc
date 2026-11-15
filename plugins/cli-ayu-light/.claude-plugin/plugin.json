@@ -1,0 +1,14 @@
+{
+  "name": "cli-ayu-light",
+  "description": "The Ayu Light variant: a clear blue accent with green success and soft red errors on a light base.",
+  "author": {
+    "name": "Tinted Theming",
+    "url": "https://github.com/tinted-theming"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/ayu-light",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

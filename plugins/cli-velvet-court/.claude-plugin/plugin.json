@@ -1,0 +1,14 @@
+{
+  "name": "cli-velvet-court",
+  "description": "A lavender accent with rose pink text and plum backgrounds, like a velvet curtain.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/velvet-court",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}
