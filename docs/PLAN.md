@@ -189,7 +189,7 @@ GA4 使用 Consent Mode v2,默认拒绝,页面带简洁的同意横幅。自写 
 | Claude Code 格式变化快                                    | 安装命令失效                  | 条目记录版本要求;`claude plugin validate` 待接入  |
 | 机器人提交 marketplace                                    | Vercel 可能 BLOCKED           | 提交作者设为 leo;部署后验证                       |
 | 官方 `git-subdir` 源 `sha` 支持                           | monorepo 主题                 | 已核实支持                                        |
-| 站点代码许可证                                            | 贡献者需要明确的授权          | 仓库添加 MIT LICENSE(未经你指定,可更改)         |
+| 站点代码许可证                                            | 贡献者需要明确的授权          | 仓库添加 MIT LICENSE(未经你指定,可更改)           |
 | TypeScript 7 兼容性                                       | 构建报错                      | 脚手架时验证,必要时回退                           |
 | 官方插件 `themes/` 的 manifest 键为 `experimental.themes` | 生成的 CLI 小插件可能不被识别 | 实现时核对官方文档和实测 `claude plugin validate` |
 
