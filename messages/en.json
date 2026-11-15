@@ -4,7 +4,7 @@
     "tagline": "Claude Code themes with previews and one-command install",
     "homeTitle": "Claude Code themes: desktop and CLI, with previews",
     "homeDescription": "Browse Claude Code desktop and CLI themes with previews, version requirements, and permission details. Install any theme with two commands.",
-    "desktopTitle": "Claude Code desktop themes: animated backdrops and previews",
+    "desktopTitle": "Claude Code desktop themes: animated backdrops",
     "desktopDescription": "Animated Claude Code desktop themes with preview videos. Each entry lists the required Claude Code version, permissions, and a pinned commit.",
     "cliTitle": "Claude Code CLI themes: color schemes and JSON files",
     "cliDescription": "Color themes for the Claude Code terminal, rendered as a mock session. Install with one command or copy the JSON into ~/.claude/themes.",
