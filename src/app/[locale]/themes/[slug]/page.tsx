@@ -289,7 +289,7 @@ async function ThemeView({ theme, locale }: { theme: Theme; locale: Locale }) {
         ) : null}
         <p>
           <OutboundLink
-            href={siteConfig.issuesUrl}
+            href={siteConfig.reportUrl}
             className="text-sm text-muted-foreground underline underline-offset-2 hover:text-foreground"
           >
             {t("report")}

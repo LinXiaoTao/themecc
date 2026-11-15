@@ -16,7 +16,7 @@ export async function SiteFooter() {
             {t("terms")}
           </Link>
           <a
-            href={siteConfig.issuesUrl}
+            href={siteConfig.reportUrl}
             rel="noopener"
             className="hover:text-foreground"
           >

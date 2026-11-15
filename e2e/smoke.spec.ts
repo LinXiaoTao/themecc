@@ -158,6 +158,23 @@ test.describe("site files", () => {
     expect(xml).toContain("hreflang");
   });
 
+  test("declares an Open Graph image that resolves", async ({
+    page,
+    request,
+  }) => {
+    for (const path of ["/", "/zh", "/cli", "/themes/nord"]) {
+      await page.goto(path);
+      const content = await page
+        .locator("meta[property='og:image']")
+        .first()
+        .getAttribute("content");
+      expect(content, path).toContain("/og.png");
+    }
+    const image = await request.get("/og.png");
+    expect(image.ok()).toBe(true);
+    expect(image.headers()["content-type"]).toBe("image/png");
+  });
+
   test("serves robots.txt that points at the sitemap", async ({ request }) => {
     const response = await request.get("/robots.txt");
     expect(response.ok()).toBe(true);

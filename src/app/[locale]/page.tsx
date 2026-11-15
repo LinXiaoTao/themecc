@@ -16,7 +16,7 @@ import {
   getCliThemes,
   getDesktopThemes,
 } from "@/lib/registry/themes";
-import { absoluteUrl, buildAlternates, localizedPath } from "@/lib/seo";
+import { absoluteUrl, buildPageMetadata, localizedPath } from "@/lib/seo";
 
 const LATEST_COUNT = 6;
 
@@ -29,21 +29,13 @@ export async function generateMetadata({
   }
   const t = await getTranslations({ locale, namespace: "Meta" });
   return {
+    ...buildPageMetadata({
+      locale,
+      pathname: "/",
+      title: t("homeTitle"),
+      description: t("homeDescription"),
+    }),
     title: { absolute: t("homeTitle") },
-    description: t("homeDescription"),
-    alternates: buildAlternates(locale, "/"),
-    openGraph: {
-      type: "website",
-      url: absoluteUrl(localizedPath(locale, "/")),
-      title: t("homeTitle"),
-      description: t("homeDescription"),
-      siteName: siteConfig.name,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("homeTitle"),
-      description: t("homeDescription"),
-    },
   };
 }
 

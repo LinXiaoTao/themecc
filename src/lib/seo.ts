@@ -30,6 +30,13 @@ export function buildAlternates(
   };
 }
 
+const DEFAULT_OG_IMAGE = {
+  url: "/og.png",
+  width: 1200,
+  height: 630,
+  alt: "ThemeCC: Claude Code themes with previews and one-command install",
+};
+
 export function buildPageMetadata(options: {
   locale: Locale;
   pathname: string;
@@ -50,7 +57,13 @@ export function buildPageMetadata(options: {
       description,
       siteName: siteConfig.name,
       locale: OG_LOCALE[locale],
+      images: [{ ...DEFAULT_OG_IMAGE, url: absoluteUrl(DEFAULT_OG_IMAGE.url) }],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [absoluteUrl(DEFAULT_OG_IMAGE.url)],
+    },
   };
 }

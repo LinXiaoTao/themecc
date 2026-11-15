@@ -94,7 +94,7 @@ CLI 主题 `registry/cli/<slug>/theme.json` 使用 Claude Code 官方格式 `{ n
 
 脚本读取 registry 生成 `.claude-plugin/marketplace.json`。桌面条目使用 `github` 源并带 `sha`。CLI 条目生成 `plugins/cli-<slug>/`。生成后用 `claude plugin validate` 校验。
 
-`git-subdir` 源是否支持 `sha`,官方文档示例中没有看到。实现时用 Context7 核对;不支持则要求桌面主题仓库为单插件仓库,不收 monorepo 子目录。
+已核实:官方文档中 `url` 与 `git-subdir` 源都支持 `sha`。所以桌面条目生成 `{source:"url", url, sha}`,带 `path` 的条目生成 `{source:"git-subdir", url, path, sha}`,monorepo 子目录可以收录。URL 一律使用完整的 `https://github.com/<repo>.git`,因为 `owner/repo` 简写会通过 SSH 克隆,未配置 SSH 密钥的用户会失败。
 
 ### marketplace 提交者
 
@@ -103,17 +103,21 @@ CLI 主题 `registry/cli/<slug>/theme.json` 使用 Claude Code 官方格式 `{ n
 ### 投稿流程
 
 1. 作者 fork,在 `registry/` 下添加目录,运行 `pnpm registry:check`。
-2. PR 触发 CI:schema 校验;slug 唯一;sha 在目标仓库存在且仓库公开;许可证存在;预览文件存在且体积合规(视频 ≤ 8 MB、≤ 15 秒,poster ≤ 300 KB);`claude plugin validate`。
-3. CLI 主题:CI 全绿后自动合并(PR 仅修改 `registry/cli/**` 时)。
+2. PR 触发 `ci.yml`:schema 校验(`registry:check`);远程校验(`registry:check:remote`:sha 在目标仓库存在、仓库公开、许可证符合);预览文件存在且体积合规(视频 ≤ 8 MB、≤ 15 秒,poster ≤ 300 KB)。本机未安装 `claude` CLI,`claude plugin validate` 暂未纳入 CI。
+3. CLI 主题:`registry-automerge.yml` 只对「全部文件都是新增、且路径为 `registry/cli/<slug>/(theme|meta).json`」的 PR 启用 auto-merge。修改已有条目或改动其他路径的 PR 一律人工审核。该 workflow 使用 `pull_request_target`,只通过 API 读取文件路径,不检出也不执行 PR 的代码。auto-merge 需要仓库开启 Allow auto-merge,并在 `main` 上把 `check` 设为必需检查,这两项是仓库设置,需要用户确认后再改。
 4. 桌面 mod:`CODEOWNERS` 要求 owner 审核,按清单检查网络请求、文件读写、命令执行、混淆代码,通过才合并。
-5. 合并后 Action 重新生成 marketplace,Vercel 自动部署。
+5. 合并后 `registry-sync.yml` 重新生成 marketplace 并以 `leo <linxiaotao1993@gmail.com>` 提交。合并提交的作者是投稿者,不一定是 Vercel 团队成员,可能触发 BLOCKED;机器人的提交是 main 上最新的一个,由它完成部署。因此每次投稿合并会产生两次部署。
 
 ### 初始内容(种子)
 
 - 只从 GitHub 仓库收集,用 GitHub API 核对许可证,只收 MIT、Apache-2.0、BSD、ISC、CC0。无许可证的不收。
 - 不从竞品站点抓取内容。
 - CLI 主题:复制主题 JSON,保留作者、许可证、上游链接和版权声明。
-- 桌面 mod:仅收录链接并固定 sha,不复制源码。
+- 桌面 mod:仅收录链接并固定 sha,不复制源码。激活方式因 mod 而异(`/deep-field`、`/rainy-window on|off` 等),用可选字段 `usage` 记录,没有 `usage` 时显示通用说明。
+- 实际收录:CLI 25 个(`scripts/seed-manifest.ts`,每条保留上游仓库、固定 commit 与版权声明),桌面 3 个(deep-field、firefly-meadow、rainy-window)。
+- 已排除:0toshigami(行为侵入性强)、theme-examples(固定 commit 下使用的 API 已被移除)、matcra587(无许可证)、一个堆砌「50 dark themes」的重复内容仓库。
+- 桌面条目的 `reviewed` 由我只做了表层审查(API 调用检索与 README)后填写,署名为 LinXiaoTao,需要你本人复核后确认。
+- 桌面预览是作者自己的截图或视频,页面注明归作者所有。
 - 描述由我们自己撰写。预览:CLI 由令牌渲染的模拟终端生成;桌面主题由我们在真实应用中截取并署名。
 - 种子脚本是一次性手动运行,不做定时抓取,不在运行时请求 GitHub。
 - 提供下架方式:作者提 Issue 或 PR 即移除。
@@ -136,11 +140,11 @@ CI 使用 GitHub 内置 `GITHUB_TOKEN`,不新增密钥。
 - sitemap:`sitemap.xml` 含 `alternates.languages`。每页 canonical 加 hreflang(`en`、`zh-Hans`、`x-default`)。
 - 内容质量:每个详情页含预览、颜色令牌、版本要求、权限声明、作者和许可证。缺预览或描述的条目不生成详情页,不进 sitemap。
 - 性能预算:LCP < 2.5s、INP < 200ms、CLS < 0.1。视频 `preload="none"`,先显示 poster,点击才播放,尊重 `prefers-reduced-motion`。
-- OG 图:构建时按主题颜色生成。
+- OG 图:桌面主题用作者的 poster;其余页面使用站点统一的 `/og.png`(`src/app/og.png/route.tsx`,构建时生成)。不使用 `opengraph-image` 文件约定,因为根目录没有 layout 时它不会注入 meta 标签,且需要 `metadataBase`。
 
 ## 7. 统计与事件
 
-GA4 使用 Consent Mode v2,默认拒绝,页面带简洁的同意横幅。
+GA4 使用 Consent Mode v2,默认拒绝,页面带简洁的同意横幅。自写 `GoogleAnalytics` 组件,只在生产部署加载(`VERCEL_ENV`),`localStorage` 里 `themecc-consent` 为 `granted` 时才授予 `analytics_storage`。预览部署为 noindex 且不加载统计。
 
 | 事件                   | 触发点                    | 参数                     |
 | ---------------------- | ------------------------- | ------------------------ |
@@ -163,7 +167,7 @@ GA4 使用 Consent Mode v2,默认拒绝,页面带简洁的同意横幅。
 ## 9. 测试与验收
 
 - 单元测试:schema 校验、marketplace 生成、安装命令构造、对比度计算。
-- Playwright 冒烟:首页、语言切换、列表筛选、详情页、复制按钮写入剪贴板、404、`/sitemap.xml`、`/robots.txt`。
+- Playwright 冒烟(桌面与移动两个项目,共 40 条):首页、语言切换、hreflang、列表筛选、详情页、复制按钮写入剪贴板、各页面无横向溢出、JSON-LD、OG 图、404、`/sitemap.xml`、`/robots.txt`。
 - 验收命令:`pnpm lint && pnpm typecheck && pnpm test && pnpm build`。
 - SEO 验收:`seo_audit.py`;Lighthouse 移动端 SEO、无障碍、最佳实践 ≥ 95,性能 ≥ 90。
 - CLI 主题对比度:官方文档没有公开 base 预设各 token 的具体值,所以只对 `overrides` 里的颜色和假定的终端背景计算对比度,页面标注"估算"。
@@ -182,9 +186,10 @@ GA4 使用 Consent Mode v2,默认拒绝,页面带简洁的同意横幅。
 | 竞争拥挤,流量未知                                         | 增长慢                        | 桌面优先定位;上线后看 GSC 再决定投入              |
 | 预览素材版权                                              | 侵权投诉                      | 投稿者声明权利;自截素材署名;提供下架方式          |
 | mod 不在沙盒里运行                                        | 用户机器风险                  | 固定 sha、人工审核、风险提示、可下架              |
-| Claude Code 格式变化快                                    | 安装命令失效                  | CI 跑 `claude plugin validate`;条目记录版本要求   |
+| Claude Code 格式变化快                                    | 安装命令失效                  | 条目记录版本要求;`claude plugin validate` 待接入  |
 | 机器人提交 marketplace                                    | Vercel 可能 BLOCKED           | 提交作者设为 leo;部署后验证                       |
-| `git-subdir` 源是否支持 `sha`                             | monorepo 主题                 | 实现时核对,不支持则不收 monorepo 子目录           |
+| 官方 `git-subdir` 源 `sha` 支持                           | monorepo 主题                 | 已核实支持                                        |
+| 站点代码许可证                                            | 贡献者需要明确的授权          | 仓库添加 MIT LICENSE(未经你指定,可更改)         |
 | TypeScript 7 兼容性                                       | 构建报错                      | 脚手架时验证,必要时回退                           |
 | 官方插件 `themes/` 的 manifest 键为 `experimental.themes` | 生成的 CLI 小插件可能不被识别 | 实现时核对官方文档和实测 `claude plugin validate` |
 

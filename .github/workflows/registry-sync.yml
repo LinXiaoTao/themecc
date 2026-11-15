@@ -1,0 +1,46 @@
+name: registry-sync
+
+# Regenerates .claude-plugin/marketplace.json and plugins/ after the registry
+# changes on main. The commit author is a verified maintainer so Vercel can
+# link the commit to the team and deploy it.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - registry/**
+      - scripts/registry-build.ts
+      - src/lib/registry/**
+      - src/config/site.ts
+
+permissions:
+  contents: write
+
+concurrency:
+  group: registry-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm registry:check
+      - run: pnpm registry:build
+      - name: Commit generated files
+        run: |
+          git add -A .claude-plugin plugins
+          if git diff --cached --quiet; then
+            echo "Generated files are up to date."
+            exit 0
+          fi
+          git config user.name "leo"
+          git config user.email "linxiaotao1993@gmail.com"
+          git commit -m "chore(registry): regenerate marketplace"
+          git push

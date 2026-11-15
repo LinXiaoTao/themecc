@@ -13,7 +13,8 @@ export const siteConfig = {
   url: resolveSiteUrl(),
   repo: "LinXiaoTao/themecc",
   repoUrl: "https://github.com/LinXiaoTao/themecc",
-  issuesUrl: "https://github.com/LinXiaoTao/themecc/issues",
+  reportUrl:
+    "https://github.com/LinXiaoTao/themecc/issues/new?template=takedown.yml",
   marketplaceName: "themecc",
   defaultBranch: "main",
   analytics: {

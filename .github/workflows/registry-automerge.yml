@@ -1,0 +1,42 @@
+name: registry-automerge
+
+# Enables auto-merge for pull requests that only add new CLI themes. GitHub
+# merges them after the required checks pass. Any other change waits for a
+# maintainer. This workflow reads file paths from the API and never checks out
+# or runs code from the pull request.
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable auto-merge for CLI-theme-only additions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          pattern='^registry/cli/[a-z0-9]+(-[a-z0-9]+)*/(theme|meta)\.json$'
+          count=0
+          while IFS=$'\t' read -r status filename; do
+            count=$((count + 1))
+            if [ "$status" != "added" ] || ! [[ "$filename" =~ $pattern ]]; then
+              echo "Not eligible for auto-merge: $status $filename"
+              exit 0
+            fi
+          done < <(gh api --paginate "repos/$REPO/pulls/$PR_NUMBER/files" \
+            --jq '.[] | [.status, .filename] | @tsv')
+          if [ "$count" -eq 0 ]; then
+            echo "No changed files."
+            exit 0
+          fi
+          gh pr merge "$PR_NUMBER" --repo "$REPO" --auto --squash

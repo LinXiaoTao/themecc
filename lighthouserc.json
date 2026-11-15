@@ -1,0 +1,31 @@
+{
+  "ci": {
+    "collect": {
+      "startServerCommand": "pnpm exec next start -p 3000",
+      "startServerReadyPattern": "Ready",
+      "url": [
+        "http://localhost:3000/",
+        "http://localhost:3000/zh",
+        "http://localhost:3000/cli",
+        "http://localhost:3000/themes/nord",
+        "http://localhost:3000/themes/rainy-window",
+        "http://localhost:3000/guides/install-themes"
+      ],
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "desktop"
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:seo": ["error", { "minScore": 0.95 }],
+        "categories:accessibility": ["warn", { "minScore": 0.9 }],
+        "categories:best-practices": ["warn", { "minScore": 0.9 }],
+        "categories:performance": ["warn", { "minScore": 0.8 }],
+        "largest-contentful-paint": ["warn", { "maxNumericValue": 2500 }],
+        "cumulative-layout-shift": ["warn", { "maxNumericValue": 0.1 }]
+      }
+    },
+    "upload": { "target": "temporary-public-storage" }
+  }
+}

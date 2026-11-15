@@ -1,0 +1,30 @@
+name: Remove a theme or report a problem
+description: Authors can ask for removal. Anyone can report a security or licensing problem.
+labels: [takedown]
+body:
+  - type: input
+    id: theme
+    attributes:
+      label: Theme
+      description: Name or URL of the theme page.
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Reason
+      options:
+        - I am the author and want it removed
+        - Licensing or attribution problem
+        - Security concern with a desktop mod
+        - Preview media belongs to someone else
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Describe the problem. For a security concern, include what the mod does and where in the source.
+    validations:
+      required: true

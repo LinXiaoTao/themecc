@@ -1,0 +1,27 @@
+name: Bug report
+description: Something on the site or an install command does not work.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Include the page URL, the command you ran, and the error message.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Claude Code version
+      description: Output of `claude --version`.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where
+      options:
+        - Website
+        - CLI theme install
+        - Desktop theme install
+        - Other
+    validations:
+      required: true
