@@ -21,7 +21,9 @@ export const siteConfig = {
     googleAnalyticsId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "",
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+    google:
+      process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ||
+      "hOdc3mUnoBIBeHSJTve2AgB1hXemy_2DY7x54pQPt_s",
     bing: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || "",
   },
 } as const;
