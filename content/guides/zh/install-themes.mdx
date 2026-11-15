@@ -1,0 +1,58 @@
+export const meta = {
+  title: "如何安装 Claude Code 主题",
+  description:
+    "从 ThemeCC 市场安装 Claude Code 桌面主题和 CLI 主题,或手动复制 CLI 主题文件。包含版本要求和卸载方法。",
+  updated: "2026-11-15",
+};
+
+Claude Code 主题分两种,安装方式不同。
+
+- **CLI 主题**是给终端界面换色的 JSON 文件,用 `/theme` 选择。
+- **桌面主题**是 [mod](https://code.claude.com/docs/zh-CN/plugins/mods/overview)。它给 Claude 桌面应用的 Code 标签页配色,还可以绘制动画背景,在会话开始时自动生效。
+
+## 从 ThemeCC 市场安装
+
+两种主题都以插件形式安装。先添加一次市场:
+
+```text
+/plugin marketplace add LinXiaoTao/themecc
+```
+
+然后用插件名安装。每个主题页面都会给出完整命令,例如:
+
+```text
+/plugin install some-theme@themecc
+```
+
+CLI 主题的插件名是 `cli-<slug>`,桌面主题的插件名就是主题的 slug。
+
+## 应用主题
+
+**CLI 主题。** 运行 `/theme`,按名称选择。来自插件的主题会在列表里标明所属插件。
+
+**桌面主题。** 在 Code 标签页新建一个本地会话。mod 会在会话开始时设置颜色和背景。背景需要 Claude Code 2.1.319 或更高版本,颜色需要 2.1.324 或更高版本。在 Code 标签页的本地会话里运行 `/status` 可以查看版本。
+
+同一时间只使用一个桌面主题。设置主题的 mod 会替换先前 mod 设置的内容。
+
+## 把 CLI 主题当作单个文件安装
+
+可以不使用插件系统。一个 CLI 主题就是 `~/.claude/themes/` 里的一个文件,去掉 `.json` 的文件名就是主题的 slug。
+
+```bash
+mkdir -p ~/.claude/themes && curl -fsSL -o ~/.claude/themes/SLUG.json \
+  https://raw.githubusercontent.com/LinXiaoTao/themecc/main/registry/cli/SLUG/theme.json
+```
+
+把 `SLUG` 换成主题的 slug。Claude Code 会监视这个目录,文件新增或修改后自动重新加载。如果启动 Claude Code 时 `~/.claude/themes/` 还不存在,需要重启一次。自定义 CLI 主题需要 Claude Code 2.1.118 或更高版本。
+
+## 卸载主题
+
+打开 `/plugin`,在 **Installed** 标签页里禁用或卸载对应插件。在桌面应用里使用 **Manage plugins**。单文件安装的 CLI 主题,直接删除 `~/.claude/themes/` 里的文件。卸载桌面主题后,请新建一个本地会话。
+
+## 没有变化时
+
+- 对照上面的要求检查 Claude Code 版本。
+- 桌面主题要在 Code 标签页的本地会话里使用。背景由桌面应用和移动应用绘制,终端不会绘制。
+- 运行 `/plugin`,确认插件已安装并启用。
+
+桌面主题是以你的权限运行的代码。安装前请先阅读[安装 Claude Code mod 主题安全吗?](/guides/mod-security)。

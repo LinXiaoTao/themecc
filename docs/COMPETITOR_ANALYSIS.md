@@ -17,56 +17,56 @@
 
 ## 1. 一句话定位
 
-| 站点 | 定位 |
-|---|---|
-| claudepluginhub.com | 全品类 Claude Code 插件目录,Themes 只是其中一个组件分类。有 Premium 付费和侧栏广告(Carbon) |
-| gabs-utilities.com/theme | 单作者的 62 款暗色 CLI 主题站,每款一页,含调色板和对比度说明 |
-| claudecodexplugins.com | 全品类 Claude/Codex 插件目录,站内列出多个 AI 导航站作为展示渠道 |
-| nilaykabariya.blog | 81 个 CLI 主题,模拟终端实时预览,一行命令安装 |
-| codexskins.app | 22 个 CLI 主题,实时渲染预览,可复制安装提示词,有中文教程 |
-| codigrate.com | 25 个 CLI 主题,部分付费 |
-| claudemods.si | mods 目录,Themes 分类 140 个条目(含状态栏、spinner 等,不限于桌面背景) |
+| 站点                     | 定位                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------ |
+| claudepluginhub.com      | 全品类 Claude Code 插件目录,Themes 只是其中一个组件分类。有 Premium 付费和侧栏广告(Carbon) |
+| gabs-utilities.com/theme | 单作者的 62 款暗色 CLI 主题站,每款一页,含调色板和对比度说明                                |
+| claudecodexplugins.com   | 全品类 Claude/Codex 插件目录,站内列出多个 AI 导航站作为展示渠道                            |
+| nilaykabariya.blog       | 81 个 CLI 主题,模拟终端实时预览,一行命令安装                                               |
+| codexskins.app           | 22 个 CLI 主题,实时渲染预览,可复制安装提示词,有中文教程                                    |
+| codigrate.com            | 25 个 CLI 主题,部分付费                                                                    |
+| claudemods.si            | mods 目录,Themes 分类 140 个条目(含状态栏、spinner 等,不限于桌面背景)                      |
 
 ## 2. 核心功能
 
-| 功能 | claudepluginhub | gabs | claudecodexplugins | nilaykabariya / codexskins |
-|---|---|---|---|---|
-| 主题列表 | 有,991 个,按插件星数排序 | 有,62 个 | 有,9 个插件 | 有 |
-| 视觉预览 | 无(只有文字描述) | 色块 + 画廊页 | 无 | 有,模拟终端 |
-| 安装方式 | 复制命令 | 复制 marketplace 命令 | 复制命令 | 复制一行命令 |
-| 区分桌面 mod 与 CLI 主题 | 否 | 否(只有 CLI) | 否 | 否(只有 CLI) |
-| 提交 / 认领 | 有 | 无 | 有(Add plugin) | 无 |
-| 登录 | 浏览不需要 | 不需要 | 不需要 | 不需要 |
+| 功能                     | claudepluginhub          | gabs                  | claudecodexplugins | nilaykabariya / codexskins |
+| ------------------------ | ------------------------ | --------------------- | ------------------ | -------------------------- |
+| 主题列表                 | 有,991 个,按插件星数排序 | 有,62 个              | 有,9 个插件        | 有                         |
+| 视觉预览                 | 无(只有文字描述)         | 色块 + 画廊页         | 无                 | 有,模拟终端                |
+| 安装方式                 | 复制命令                 | 复制 marketplace 命令 | 复制命令           | 复制一行命令               |
+| 区分桌面 mod 与 CLI 主题 | 否                       | 否(只有 CLI)          | 否                 | 否(只有 CLI)               |
+| 提交 / 认领              | 有                       | 无                    | 有(Add plugin)     | 无                         |
+| 登录                     | 浏览不需要               | 不需要                | 不需要             | 不需要                     |
 
 主流程(以 gabs 为例):首页 → 主题详情 → 复制安装命令,共 3 步。
 
 ## 3. 信息架构
 
-| 站点 | sitemap 条目 | 分布 |
-|---|---|---|
-| claudepluginhub.com | 约 55k(45000 + 9996) | /plugins 28031、/marketplaces 12288、/mcp-servers 4328、/skills 约 4.9k、/themes 379、/commands 1894、/agents 1504 |
-| gabs-utilities.com | 68 | /theme/* 63 个,指南 3 页 |
-| claudecodexplugins.com | 20654 | /plugins 20448、/categories 201 |
+| 站点                   | sitemap 条目         | 分布                                                                                                               |
+| ---------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| claudepluginhub.com    | 约 55k(45000 + 9996) | /plugins 28031、/marketplaces 12288、/mcp-servers 4328、/skills 约 4.9k、/themes 379、/commands 1894、/agents 1504 |
+| gabs-utilities.com     | 68                   | /theme/* 63 个,指南 3 页                                                                                           |
+| claudecodexplugins.com | 20654                | /plugins 20448、/categories 201                                                                                    |
 
 claudepluginhub 和 claudecodexplugins 都是程序化页面,依据是 GitHub 上已索引的插件仓库。
 
 ## 4. 获客手段
 
-| 渠道 | 做法 | 证据 | 可借鉴性 |
-|---|---|---|---|
-| SEO | 大量程序化详情页;gabs 做每主题一页并带对比度数据 | 上述 sitemap 规模 | 借鉴 gabs 的"每页有独有数据";不借鉴无独有价值的程序化页 |
-| 内容 | 教程文章(安装指南、语义色说明) | gabs 有 3 页指南;搜索结果中有大量教程文章 | 借鉴,做中英文指南 |
-| 产品内增长 | 提交 / 认领入口;ccthemes 提供贡献命令 | 页面所见 | 借鉴 PR 投稿 |
-| 付费 / 合作 | claudepluginhub 有 Premium 与广告;claudecodexplugins 的 Get Featured | 页面所见 | 不做 |
-| 外链来源 | 未获取(未使用 SimilarWeb、Ahrefs) | - | - |
+| 渠道        | 做法                                                                 | 证据                                      | 可借鉴性                                                |
+| ----------- | -------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------- |
+| SEO         | 大量程序化详情页;gabs 做每主题一页并带对比度数据                     | 上述 sitemap 规模                         | 借鉴 gabs 的"每页有独有数据";不借鉴无独有价值的程序化页 |
+| 内容        | 教程文章(安装指南、语义色说明)                                       | gabs 有 3 页指南;搜索结果中有大量教程文章 | 借鉴,做中英文指南                                       |
+| 产品内增长  | 提交 / 认领入口;ccthemes 提供贡献命令                                | 页面所见                                  | 借鉴 PR 投稿                                            |
+| 付费 / 合作 | claudepluginhub 有 Premium 与广告;claudecodexplugins 的 Get Featured | 页面所见                                  | 不做                                                    |
+| 外链来源    | 未获取(未使用 SimilarWeb、Ahrefs)                                    | -                                         | -                                                       |
 
 ## 5. 技术信号
 
-| 站点 | 技术 | 性能 |
-|---|---|---|
-| claudepluginhub.com | Cloudflare;对未验证浏览器出现机器人验证;Lighthouse 请求返回 403 | LCP 230 ms、CLS 0.00(用户 Chrome 实验室数据,2026-11-15;CrUX 无该页面数据;INP 未获取) |
-| gabs-utilities.com | GitHub Pages 静态站 | 未获取 |
-| claudecodexplugins.com | Next.js + Vercel,Cloudflare 在前 | 未获取 |
+| 站点                   | 技术                                                            | 性能                                                                                 |
+| ---------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| claudepluginhub.com    | Cloudflare;对未验证浏览器出现机器人验证;Lighthouse 请求返回 403 | LCP 230 ms、CLS 0.00(用户 Chrome 实验室数据,2026-11-15;CrUX 无该页面数据;INP 未获取) |
+| gabs-utilities.com     | GitHub Pages 静态站                                             | 未获取                                                                               |
+| claudecodexplugins.com | Next.js + Vercel,Cloudflare 在前                                | 未获取                                                                               |
 
 ## 6. 结论
 
@@ -87,11 +87,11 @@ claudepluginhub 和 claudecodexplugins 都是程序化页面,依据是 GitHub �
 
 ### 复刻范围
 
-| 优先级 | 功能 |
-|---|---|
-| P0 | 桌面主题(为主)与 CLI 主题的列表页、详情页;预览图 / 视频;一键复制安装命令;registry 仓库 PR 提交与 CI 校验;自动生成 marketplace.json;中英文双语 |
-| P1 | CLI 主题的网页模拟终端预览与对比度估算;按明暗、版本、动画筛选;mod 权限声明与风险标签;提交指南页和安装教程页 |
-| P2 | 主题合集;RSS;每周新增 |
+| 优先级 | 功能                                                                                                                                          |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| P0     | 桌面主题(为主)与 CLI 主题的列表页、详情页;预览图 / 视频;一键复制安装命令;registry 仓库 PR 提交与 CI 校验;自动生成 marketplace.json;中英文双语 |
+| P1     | CLI 主题的网页模拟终端预览与对比度估算;按明暗、版本、动画筛选;mod 权限声明与风险标签;提交指南页和安装教程页                                   |
+| P2     | 主题合集;RSS;每周新增                                                                                                                         |
 
 明确不做:账号系统、评论、评分、广告、付费、全站抓取竞品站内容、无独有内容的程序化页面。
 

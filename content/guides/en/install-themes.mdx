@@ -1,0 +1,58 @@
+export const meta = {
+  title: "How to install a Claude Code theme",
+  description:
+    "Install Claude Code desktop and CLI themes from the ThemeCC marketplace, or copy a CLI theme file by hand. Includes version requirements and how to remove a theme.",
+  updated: "2026-11-15",
+};
+
+There are two kinds of Claude Code themes, and they install differently.
+
+- **CLI themes** are JSON files that recolor the terminal interface. Pick one with `/theme`.
+- **Desktop themes** are [mods](https://code.claude.com/docs/en/plugins/mods/overview). They color the Code tab of the Claude desktop app and can draw an animated backdrop. They apply themselves when a session starts.
+
+## Install from the ThemeCC marketplace
+
+Both kinds install as plugins. Add the marketplace once:
+
+```text
+/plugin marketplace add LinXiaoTao/themecc
+```
+
+Then install any theme by its plugin name. Each theme page shows the exact command. For example:
+
+```text
+/plugin install some-theme@themecc
+```
+
+CLI theme plugins are named `cli-<slug>`. Desktop theme plugins use the theme's slug.
+
+## Apply the theme
+
+**CLI theme.** Run `/theme` and choose the theme by name. Plugin themes appear in the list marked with the plugin they come from.
+
+**Desktop theme.** Start a new local session in the Code tab. The mod sets the colors and backdrop when the session starts. Desktop themes need Claude Code 2.1.319 or later for backdrops and 2.1.324 or later for colors. Run `/status` in a local Code tab session to see the version.
+
+Use one desktop theme at a time. A mod that sets a theme replaces whatever an earlier mod set.
+
+## Install a CLI theme as a single file
+
+You can skip the plugin system. A CLI theme is one file in `~/.claude/themes/`, and the file name without `.json` is the theme's slug.
+
+```bash
+mkdir -p ~/.claude/themes && curl -fsSL -o ~/.claude/themes/SLUG.json \
+  https://raw.githubusercontent.com/LinXiaoTao/themecc/main/registry/cli/SLUG/theme.json
+```
+
+Replace `SLUG` with the theme's slug. Claude Code watches the folder and reloads when a file is added or changed. If `~/.claude/themes/` did not exist when Claude Code started, restart it once. Custom CLI themes need Claude Code 2.1.118 or later.
+
+## Remove a theme
+
+Open `/plugin`, go to the **Installed** tab, and disable or uninstall the plugin. In the desktop app, use **Manage plugins**. For a single-file CLI theme, delete the file from `~/.claude/themes/`. After removing a desktop theme, start a new local session.
+
+## If nothing changes
+
+- Check the Claude Code version against the requirements above.
+- For a desktop theme, make sure the session is a local session in the Code tab. Backdrops are drawn by the desktop and mobile apps, not the terminal.
+- Run `/plugin` and check that the plugin is installed and enabled.
+
+Desktop themes are code that runs with your permissions. Read [Is it safe to install a Claude Code mod theme?](/guides/mod-security) before you install one.

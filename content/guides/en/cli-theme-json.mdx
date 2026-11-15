@@ -1,0 +1,61 @@
+export const meta = {
+  title: "Write a Claude Code CLI theme: the JSON format",
+  description:
+    "The Claude Code custom theme file format: name, base, and overrides, accepted color values, common tokens, and how to test a theme before you submit it.",
+  updated: "2026-11-15",
+};
+
+A Claude Code CLI theme is a JSON file in `~/.claude/themes/`. The file name without `.json` is the theme's slug. Selecting the theme in `/theme` stores `custom:<slug>` as your preference. This format is described in the [terminal configuration docs](https://code.claude.com/docs/en/terminal-config#create-a-custom-theme).
+
+## The three fields
+
+All fields are optional in Claude Code. ThemeCC requires all three.
+
+- `name`: the label shown in `/theme`. Defaults to the slug.
+- `base`: the built-in preset the theme starts from: `dark`, `light`, `dark-daltonized`, `light-daltonized`, `dark-ansi`, or `light-ansi`. Defaults to `dark`.
+- `overrides`: a map from color token names to color values. Tokens you leave out come from the base preset.
+
+```json
+{
+  "name": "Dracula",
+  "base": "dark",
+  "overrides": {
+    "claude": "#bd93f9",
+    "error": "#ff5555",
+    "success": "#50fa7b"
+  }
+}
+```
+
+## Color values
+
+A value can be `#rrggbb`, `#rgb`, `rgb(r,g,b)`, `ansi256(n)`, or `ansi:<name>`, where the name is one of the 16 standard ANSI color names such as `red` or `cyanBright`. Claude Code ignores unknown tokens and invalid values, so a typo does not break rendering. ThemeCC rejects them instead, so you find the typo before you submit.
+
+Colors written as `ansi` values follow your terminal's palette. ThemeCC cannot score their contrast.
+
+## Common tokens
+
+- `claude`: the brand accent, used for the spinner and the assistant label
+- `text`: default foreground text
+- `subtle`, `inactive`: de-emphasized text and borders
+- `suggestion`, `permission`: autocomplete highlights and dialog borders
+- `success`, `error`, `warning`: status colors
+- `promptBorder`: the input box border
+- `diffAdded`, `diffRemoved`: backgrounds of added and removed lines
+- `userMessageBackground`: the background behind your messages
+
+The [token reference](https://code.claude.com/docs/en/terminal-config#color-token-reference) lists every token, including shimmer variants and the colors used for subagents.
+
+## What a CLI theme does not change
+
+A theme recolors Claude Code's interface. It does not change your terminal's background or font. A theme that looks right on a dark terminal can be hard to read on a light one, so choose the right `base` and check contrast for text tokens against the background you expect.
+
+## Test it
+
+1. Save the file as `~/.claude/themes/my-theme.json`.
+2. Run `/theme` and select it. Claude Code reloads the folder when files change, so you can keep editing while a session is open. If the folder did not exist when Claude Code started, restart once.
+3. Open a diff, trigger a permission prompt, and cause an error, so you see the status colors and borders in use.
+
+## Submit it to ThemeCC
+
+Add `registry/cli/<slug>/theme.json` and `meta.json` in a pull request. The [submission page](/submit) lists the rules.

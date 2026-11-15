@@ -1,0 +1,53 @@
+export const meta = {
+  title: "安装 Claude Code mod 主题安全吗?",
+  description:
+    "桌面主题是以你的权限运行、不在沙盒里的 mod。说明 mod 能访问什么,安装前如何检查,以及 ThemeCC 如何审核。",
+  updated: "2026-11-15",
+};
+
+CLI 主题只是带颜色值的 JSON 文件,不能运行代码。桌面主题不同:它是 [mod](https://code.claude.com/docs/zh-CN/plugins/mods/overview),而 mod 是代码。
+
+## mod 能访问什么
+
+官方文档说明,mod 在 Claude Code 内部以你的权限运行。加载后它可以:
+
+- 读写你的用户账户能访问的任何文件
+- 启动程序、发起网络请求
+- 读取环境变量和设置文件,包括保存在其中的 API 密钥
+- 看到你发送的每条提示和 Claude 的每次工具调用
+- 改写提示或工具调用,或在询问你之前批准某次工具调用
+- 用你的套餐或 API 密钥调用模型
+
+mod 不在沙盒里。开启沙盒后,沙盒隔离的是 Claude 运行的 Bash 命令,mod 启动的进程在沙盒之外运行。默认情况下,内置的保护机制会阻止用户的 mod 批准本该被你的 deny 规则拦截的工具调用。最新细节请阅读 [mods 概览里的信任部分](https://code.claude.com/docs/en/plugins/mods/overview#decide-whether-to-trust-a-mod)。
+
+只设置颜色和绘制背景的主题用不到这些能力。所以请求网络访问或运行命令的主题,值得多看一眼。
+
+## 安装前先检查
+
+克隆插件的仓库,然后对目录运行:
+
+```bash
+claude plugin validate ./some-theme
+```
+
+输出里的 `hooks:` 和 `calls:` 行会列出 mod 处理的事件,以及它要求 Claude Code 做的事,例如读取文件或发起网络请求。一个主题通常只处理 `session.start` 和绘制背景的渲染点,几乎不需要别的。[管理员指南](https://code.claude.com/docs/en/plugins/mods/admin#review-what-a-mod-can-do)说明了应该关注哪些调用。
+
+## ThemeCC 如何审核桌面主题
+
+- 条目指向作者仓库中某一个完整的 commit 哈希,而不是分支。之后该仓库的改动不会通过 ThemeCC 到达你这里。
+- 维护者在合并前阅读该 commit 的源码。审核人和日期会显示在主题页面上。
+- 页面上的权限(网络、文件、命令)由维护者阅读代码后声明。
+- 不接受混淆或压缩过的代码。
+- 更新时,作者需要用新的哈希重新提交 pull request,并再次审核。
+
+这样能降低风险,但不能消除风险。ThemeCC 不运行代码,也不提供沙盒。是否信任作者,仍然要由你判断。
+
+## 关闭 mod
+
+- **单个 mod:** 在 `/plugin` 的 **Installed** 标签页里禁用或卸载对应插件,或者在桌面应用的 **Manage plugins** 里操作。
+- **单个会话里的所有 mod:** 用 `--safe-mode` 启动 Claude Code。
+- **每个会话里已安装的所有 mod:** 在 `~/.claude/settings.json` 里设置 `"disableAllHooks": true`。这也会停用你的 settings hook 和自定义状态栏。
+
+## 报告问题
+
+如果发现已收录的主题做了超出声明的事,请在 [ThemeCC 仓库](https://github.com/LinXiaoTao/themecc/issues)提交 issue。核查期间该条目会被下架。

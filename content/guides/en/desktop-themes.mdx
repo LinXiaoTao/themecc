@@ -1,0 +1,47 @@
+export const meta = {
+  title: "Claude Code desktop themes: what they are and how they work",
+  description:
+    "Desktop themes are mods that call the theme API to set colors and an animated backdrop in the Claude desktop app. What they can change, what they cannot, and version requirements.",
+  updated: "2026-11-15",
+};
+
+A Claude Code desktop theme is a [mod](https://code.claude.com/docs/en/plugins/mods/overview): a plugin whose JavaScript or TypeScript code runs inside Claude Code. A theme mod calls `$.theme.set` when a session starts. The call can carry two things:
+
+- **colors** for the Code tab of the Claude desktop app
+- a **backdrop** that the desktop or mobile app draws behind the conversation
+
+## What a theme can and cannot change
+
+Backdrops need Claude Code 2.1.319 or later. Colors for the Code tab need 2.1.324 or later.
+
+The terminal draws no backdrop, and Claude Code in the terminal keeps its own colors. To recolor the terminal interface, use a [CLI theme](/guides/cli-theme-json).
+
+A session has one theme. When any mod calls `$.theme.set` or `$.theme.clear()`, the colors and backdrop from an earlier call are removed. Install one theme mod at a time.
+
+## What the code looks like
+
+This is the shape of a backdrop mod, based on the official example. It requires Claude Code 2.1.323 or later:
+
+```javascript
+export function register(on) {
+  on("session.start", async ($, e, next) => {
+    await $.theme.set({
+      backdrop: { scene: "night-sky" },
+      overrideColorScheme: "dark",
+    });
+    return next(e);
+  });
+}
+```
+
+A second hook draws the scene. The [mods documentation](https://code.claude.com/docs/en/plugins/mods/interface#put-a-backdrop-behind-the-conversation) has the full example, and the section on [changing the colors of the Desktop app](https://code.claude.com/docs/en/plugins/mods/interface#change-the-colors-of-the-desktop-app) covers colors.
+
+## Why a theme needs review
+
+Because a theme is a mod, it is not limited to drawing. It runs with the same access as Claude Code and is not sandboxed. A theme that only draws should not need the network, your files, or other programs, so ThemeCC lists what each one uses.
+
+Every desktop theme on ThemeCC is pinned to one commit, read by a maintainer before it is listed, and shown with its declared permissions. See [Is it safe to install a Claude Code mod theme?](/guides/mod-security).
+
+## Install one
+
+See [How to install a Claude Code theme](/guides/install-themes).

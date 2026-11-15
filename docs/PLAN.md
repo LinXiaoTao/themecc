@@ -19,16 +19,16 @@
 
 规则:小写、连字符、内容不放在查询参数里、URL 稳定。默认英文不带前缀,中文使用 `/zh`。
 
-| 页面类型 | URL 模式 | 渲染方式 | 目标意图 | 数量 |
-|---|---|---|---|---|
-| 首页 | `/`、`/zh` | SSG | claude code themes | 2 |
-| 桌面主题列表 | `/desktop` | SSG | claude code desktop themes | 2 |
-| CLI 主题列表 | `/cli` | SSG | claude code cli themes | 2 |
-| 主题详情 | `/themes/[slug]` | SSG,slug 全站唯一 | 主题名 + claude code theme | 每个条目 2 |
-| 提交指南 | `/submit` | SSG | 提交主题 | 2 |
-| 指南 | `/guides/[slug]` | SSG,MDX | 教程类词 | 4 篇起,每篇 2 种语言 |
-| 隐私、条款 | `/privacy`、`/terms` | SSG | 合规 | 各 2 |
-| marketplace | 仓库根 `.claude-plugin/marketplace.json` | Action 生成 | 安装入口 | 1 |
+| 页面类型     | URL 模式                                 | 渲染方式          | 目标意图                   | 数量                 |
+| ------------ | ---------------------------------------- | ----------------- | -------------------------- | -------------------- |
+| 首页         | `/`、`/zh`                               | SSG               | claude code themes         | 2                    |
+| 桌面主题列表 | `/desktop`                               | SSG               | claude code desktop themes | 2                    |
+| CLI 主题列表 | `/cli`                                   | SSG               | claude code cli themes     | 2                    |
+| 主题详情     | `/themes/[slug]`                         | SSG,slug 全站唯一 | 主题名 + claude code theme | 每个条目 2           |
+| 提交指南     | `/submit`                                | SSG               | 提交主题                   | 2                    |
+| 指南         | `/guides/[slug]`                         | SSG,MDX           | 教程类词                   | 4 篇起,每篇 2 种语言 |
+| 隐私、条款   | `/privacy`、`/terms`                     | SSG               | 合规                       | 各 2                 |
+| marketplace  | 仓库根 `.claude-plugin/marketplace.json` | Action 生成       | 安装入口                   | 1                    |
 
 筛选只在客户端过滤,不生成参数 URL,不进 sitemap。不做作者页、颜色页等程序化页面。
 
@@ -36,17 +36,17 @@
 
 版本为 2026-11-15 的 npm 最新版。
 
-| 项 | 选择 | 理由 | 备选 |
-|---|---|---|---|
-| 包管理 | pnpm 10,`packageManager` 固定,`.nvmrc` 固定 Node LTS | 默认栈 | - |
-| 框架 | Next.js 16.4.6,App Router,React 19.3.1,全站 SSG | 内容站,无需运行时服务 | - |
-| 语言 | TypeScript strict | 默认栈 | 若 npm 最新的 7.0.2 与 Next、Biome、Vitest 不兼容,回退到最新稳定 6.x 并记录 |
-| 样式 | Tailwind 4.3.5 + shadcn 4.23.0 | 默认栈 | - |
-| 多语言 | next-intl 4.15.1,`localePrefix: 'as-needed'` | 英文无前缀,中文 `/zh`,支持 hreflang | - |
-| 校验 | Zod 4.6.7 | 同一份 schema 校验 registry 和环境变量,导出 JSON Schema 供投稿者使用 | - |
-| 质量 | Biome 2.6.7、Vitest 5.1.0、Playwright 1.65.1 | 默认栈 | - |
-| 内容 | MDX(指南)+ JSON(主题) | 无数据库 | - |
-| 部署 | Vercel + GitHub 自动构建 | 默认栈 | - |
+| 项     | 选择                                                 | 理由                                                                 | 备选                                                                        |
+| ------ | ---------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| 包管理 | pnpm 10,`packageManager` 固定,`.nvmrc` 固定 Node LTS | 默认栈                                                               | -                                                                           |
+| 框架   | Next.js 16.4.6,App Router,React 19.3.1,全站 SSG      | 内容站,无需运行时服务                                                | -                                                                           |
+| 语言   | TypeScript strict                                    | 默认栈                                                               | 若 npm 最新的 7.0.2 与 Next、Biome、Vitest 不兼容,回退到最新稳定 6.x 并记录 |
+| 样式   | Tailwind 4.3.5 + shadcn 4.23.0                       | 默认栈                                                               | -                                                                           |
+| 多语言 | next-intl 4.15.1,`localePrefix: 'as-needed'`         | 英文无前缀,中文 `/zh`,支持 hreflang                                  | -                                                                           |
+| 校验   | Zod 4.6.7                                            | 同一份 schema 校验 registry 和环境变量,导出 JSON Schema 供投稿者使用 | -                                                                           |
+| 质量   | Biome 2.6.7、Vitest 5.1.0、Playwright 1.65.1         | 默认栈                                                               | -                                                                           |
+| 内容   | MDX(指南)+ JSON(主题)                                | 无数据库                                                             | -                                                                           |
+| 部署   | Vercel + GitHub 自动构建                             | 默认栈                                                               | -                                                                           |
 
 实现前用 Context7 再次核对 Next.js、next-intl、Claude Code 官方文档对应的 API,不凭记忆写。
 
@@ -120,12 +120,12 @@ CLI 主题 `registry/cli/<slug>/theme.json` 使用 Claude Code 官方格式 `{ n
 
 ### 环境变量
 
-| 名称 | 用途 | 是否公开 |
-|---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | canonical、sitemap | 是 |
-| `NEXT_PUBLIC_GA_ID` | GA4 | 是 |
-| `NEXT_PUBLIC_GSC_TOKEN` | Search Console 验证标签 | 是 |
-| `NEXT_PUBLIC_BING_TOKEN` | Bing 验证标签 | 是 |
+| 名称                     | 用途                    | 是否公开 |
+| ------------------------ | ----------------------- | -------- |
+| `NEXT_PUBLIC_SITE_URL`   | canonical、sitemap      | 是       |
+| `NEXT_PUBLIC_GA_ID`      | GA4                     | 是       |
+| `NEXT_PUBLIC_GSC_TOKEN`  | Search Console 验证标签 | 是       |
+| `NEXT_PUBLIC_BING_TOKEN` | Bing 验证标签           | 是       |
 
 CI 使用 GitHub 内置 `GITHUB_TOKEN`,不新增密钥。
 
@@ -142,14 +142,14 @@ CI 使用 GitHub 内置 `GITHUB_TOKEN`,不新增密钥。
 
 GA4 使用 Consent Mode v2,默认拒绝,页面带简洁的同意横幅。
 
-| 事件 | 触发点 | 参数 |
-|---|---|---|
-| `copy_install` | 点击复制安装命令 | `slug`、`type`、`method` |
-| `copy_marketplace_add` | 复制 marketplace 添加命令 | `placement` |
-| `preview_play` | 播放预览视频 | `slug` |
-| `outbound_repo_click` | 点击作者仓库 | `slug` |
-| `submit_click` | 点击提交入口 | `placement` |
-| `filter_use` | 使用筛选 | `filter`、`value` |
+| 事件                   | 触发点                    | 参数                     |
+| ---------------------- | ------------------------- | ------------------------ |
+| `copy_install`         | 点击复制安装命令          | `slug`、`type`、`method` |
+| `copy_marketplace_add` | 复制 marketplace 添加命令 | `placement`              |
+| `preview_play`         | 播放预览视频              | `slug`                   |
+| `outbound_repo_click`  | 点击作者仓库              | `slug`                   |
+| `submit_click`         | 点击提交入口              | `placement`              |
+| `filter_use`           | 使用筛选                  | `filter`、`value`        |
 
 转化事件:`copy_install`。
 
@@ -177,15 +177,15 @@ GA4 使用 Consent Mode v2,默认拒绝,页面带简洁的同意横幅。
 
 ## 11. 风险与待确认
 
-| 风险 / 问题 | 影响 | 方案 |
-|---|---|---|
-| 竞争拥挤,流量未知 | 增长慢 | 桌面优先定位;上线后看 GSC 再决定投入 |
-| 预览素材版权 | 侵权投诉 | 投稿者声明权利;自截素材署名;提供下架方式 |
-| mod 不在沙盒里运行 | 用户机器风险 | 固定 sha、人工审核、风险提示、可下架 |
-| Claude Code 格式变化快 | 安装命令失效 | CI 跑 `claude plugin validate`;条目记录版本要求 |
-| 机器人提交 marketplace | Vercel 可能 BLOCKED | 提交作者设为 leo;部署后验证 |
-| `git-subdir` 源是否支持 `sha` | monorepo 主题 | 实现时核对,不支持则不收 monorepo 子目录 |
-| TypeScript 7 兼容性 | 构建报错 | 脚手架时验证,必要时回退 |
+| 风险 / 问题                                               | 影响                          | 方案                                              |
+| --------------------------------------------------------- | ----------------------------- | ------------------------------------------------- |
+| 竞争拥挤,流量未知                                         | 增长慢                        | 桌面优先定位;上线后看 GSC 再决定投入              |
+| 预览素材版权                                              | 侵权投诉                      | 投稿者声明权利;自截素材署名;提供下架方式          |
+| mod 不在沙盒里运行                                        | 用户机器风险                  | 固定 sha、人工审核、风险提示、可下架              |
+| Claude Code 格式变化快                                    | 安装命令失效                  | CI 跑 `claude plugin validate`;条目记录版本要求   |
+| 机器人提交 marketplace                                    | Vercel 可能 BLOCKED           | 提交作者设为 leo;部署后验证                       |
+| `git-subdir` 源是否支持 `sha`                             | monorepo 主题                 | 实现时核对,不支持则不收 monorepo 子目录           |
+| TypeScript 7 兼容性                                       | 构建报错                      | 脚手架时验证,必要时回退                           |
 | 官方插件 `themes/` 的 manifest 键为 `experimental.themes` | 生成的 CLI 小插件可能不被识别 | 实现时核对官方文档和实测 `claude plugin validate` |
 
 ## 12. 里程碑

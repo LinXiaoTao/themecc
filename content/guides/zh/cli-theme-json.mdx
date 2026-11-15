@@ -1,0 +1,61 @@
+export const meta = {
+  title: "编写 Claude Code CLI 主题:JSON 格式说明",
+  description:
+    "Claude Code 自定义主题文件的格式:name、base、overrides 三个字段,支持的颜色写法,常用 token,以及提交前如何测试。",
+  updated: "2026-11-15",
+};
+
+Claude Code CLI 主题是 `~/.claude/themes/` 里的一个 JSON 文件。去掉 `.json` 的文件名就是主题的 slug。在 `/theme` 里选中后,偏好设置会存为 `custom:<slug>`。格式说明见[终端配置文档](https://code.claude.com/docs/en/terminal-config#create-a-custom-theme)。
+
+## 三个字段
+
+Claude Code 里这三个字段都是可选的,ThemeCC 要求全部填写。
+
+- `name`:在 `/theme` 里显示的名称,默认是 slug。
+- `base`:主题起点使用的内置预设,可选 `dark`、`light`、`dark-daltonized`、`light-daltonized`、`dark-ansi`、`light-ansi`,默认 `dark`。
+- `overrides`:颜色 token 名称到颜色值的映射。没写的 token 沿用 base 预设。
+
+```json
+{
+  "name": "Dracula",
+  "base": "dark",
+  "overrides": {
+    "claude": "#bd93f9",
+    "error": "#ff5555",
+    "success": "#50fa7b"
+  }
+}
+```
+
+## 颜色值
+
+可以写 `#rrggbb`、`#rgb`、`rgb(r,g,b)`、`ansi256(n)` 或 `ansi:<name>`,其中 name 是 16 个标准 ANSI 颜色名之一,例如 `red`、`cyanBright`。Claude Code 会忽略未知的 token 和无效的值,所以写错不会导致渲染失败。ThemeCC 会直接拒绝它们,让你在提交前发现拼写错误。
+
+使用 `ansi` 写法的颜色跟随终端自己的调色板,ThemeCC 无法计算它们的对比度。
+
+## 常用 token
+
+- `claude`:品牌主色,用于加载动画和助手标签
+- `text`:默认前景文字
+- `subtle`、`inactive`:弱化的文字和边框
+- `suggestion`、`permission`:自动补全高亮和对话框边框
+- `success`、`error`、`warning`:状态颜色
+- `promptBorder`:输入框边框
+- `diffAdded`、`diffRemoved`:新增行和删除行的背景
+- `userMessageBackground`:你发送的消息的背景
+
+[token 参考](https://code.claude.com/docs/en/terminal-config#color-token-reference)列出了全部 token,包括 shimmer 变体和子代理使用的颜色。
+
+## CLI 主题不会改变什么
+
+主题只给 Claude Code 的界面换色,不会改变终端的背景和字体。在深色终端上好看的主题,在浅色终端上可能难以阅读,所以要选对 `base`,并按你预期的背景检查文字 token 的对比度。
+
+## 测试
+
+1. 把文件保存为 `~/.claude/themes/my-theme.json`。
+2. 运行 `/theme` 并选中它。文件变化时 Claude Code 会重新加载目录,所以会话开着也能继续编辑。如果启动 Claude Code 时这个目录不存在,需要重启一次。
+3. 打开一个 diff,触发一次权限提示,再制造一个错误,确认状态颜色和边框都显示正常。
+
+## 提交到 ThemeCC
+
+通过 pull request 添加 `registry/cli/<slug>/theme.json` 和 `meta.json`。规则见[提交页面](/submit)。

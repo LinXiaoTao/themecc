@@ -1,0 +1,47 @@
+export const meta = {
+  title: "Claude Code 桌面主题是什么,如何工作",
+  description:
+    "桌面主题是调用主题 API 的 mod,在 Claude 桌面应用里设置颜色和动画背景。说明它能改什么、不能改什么,以及版本要求。",
+  updated: "2026-11-15",
+};
+
+Claude Code 桌面主题是一个 [mod](https://code.claude.com/docs/zh-CN/plugins/mods/overview),也就是在 Claude Code 内部运行 JavaScript 或 TypeScript 代码的插件。主题 mod 在会话开始时调用 `$.theme.set`,调用里可以带两样东西:
+
+- Claude 桌面应用 Code 标签页的**颜色**
+- 由桌面应用或移动应用绘制在对话后面的**背景**
+
+## 主题能改什么,不能改什么
+
+背景需要 Claude Code 2.1.319 或更高版本。Code 标签页的颜色需要 2.1.324 或更高版本。
+
+终端不绘制背景,终端里的 Claude Code 保持自己的配色。要给终端界面换色,请使用 [CLI 主题](/guides/cli-theme-json)。
+
+一个会话只有一个主题。任何 mod 调用 `$.theme.set` 或 `$.theme.clear()` 时,之前设置的颜色和背景都会被移除。请一次只安装一个主题 mod。
+
+## 代码大致是什么样
+
+下面是背景 mod 的基本结构,改写自官方示例,需要 Claude Code 2.1.323 或更高版本:
+
+```javascript
+export function register(on) {
+  on("session.start", async ($, e, next) => {
+    await $.theme.set({
+      backdrop: { scene: "night-sky" },
+      overrideColorScheme: "dark",
+    });
+    return next(e);
+  });
+}
+```
+
+还需要另一个 hook 来绘制这个场景。完整示例见 [mods 文档](https://code.claude.com/docs/en/plugins/mods/interface#put-a-backdrop-behind-the-conversation),颜色部分见[更改桌面应用的颜色](https://code.claude.com/docs/en/plugins/mods/interface#change-the-colors-of-the-desktop-app)。
+
+## 为什么主题需要审核
+
+主题是 mod,能力不限于绘制。它以与 Claude Code 相同的权限运行,不在沙盒里。只负责绘制的主题不应该需要网络、你的文件或其他程序,所以 ThemeCC 会列出每个主题实际用到的权限。
+
+ThemeCC 上的每个桌面主题都固定在某一个 commit,由维护者阅读源码后才收录,并显示它声明的权限。详见[安装 Claude Code mod 主题安全吗?](/guides/mod-security)。
+
+## 安装
+
+见[如何安装 Claude Code 主题](/guides/install-themes)。

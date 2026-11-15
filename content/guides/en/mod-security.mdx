@@ -1,0 +1,53 @@
+export const meta = {
+  title: "Is it safe to install a Claude Code mod theme?",
+  description:
+    "Desktop themes are mods that run with your permissions and are not sandboxed. What a mod can reach, how to inspect one before installing, and how ThemeCC reviews them.",
+  updated: "2026-11-15",
+};
+
+A CLI theme is a JSON file with color values. It cannot run code. A desktop theme is different: it is a [mod](https://code.claude.com/docs/en/plugins/mods/overview), and a mod is code.
+
+## What a mod can reach
+
+The official documentation says a mod runs with your permissions, inside Claude Code. Once it loads, it can:
+
+- read and write files anywhere your user account can
+- start programs and make network requests
+- read environment variables and settings files, including API keys stored in them
+- see every prompt you send and every tool call Claude makes
+- rewrite a prompt or a tool call, or approve a tool call before you are asked
+- call a model on your plan or API key
+
+Mods are not sandboxed. If you turn on sandboxing, it isolates the Bash commands Claude runs, and a process that a mod starts runs outside it. By default a built-in guard stops a user's mod from approving tool calls that your deny rules would block. Read the [trust section of the mods overview](https://code.claude.com/docs/en/plugins/mods/overview#decide-whether-to-trust-a-mod) for the current details.
+
+A theme that only sets colors and draws a backdrop does not need any of this. That is why a theme asking for network access or running commands deserves a closer look.
+
+## Inspect a mod before you install it
+
+Clone the plugin's repository, then run this on its directory:
+
+```bash
+claude plugin validate ./some-theme
+```
+
+The `hooks:` and `calls:` lines in the output list the events the mod handles and what it asks Claude Code to do, such as reading a file or making a network request. A theme should handle `session.start` and the render site for its backdrop, and little else. The [admin guide](https://code.claude.com/docs/en/plugins/mods/admin#review-what-a-mod-can-do) explains which calls to look for.
+
+## How ThemeCC reviews desktop themes
+
+- The entry points to the author's repository at one full commit hash, not a branch. A later change in that repository does not reach you through ThemeCC.
+- A maintainer reads the source at that commit before the theme is merged. The reviewer and date are shown on the theme page.
+- The permissions on the page (network, files, commands) are declared by the maintainers after reading the code.
+- Obfuscated or minified code is not accepted.
+- To update, the author opens a new pull request with a new hash, and it is reviewed again.
+
+This reduces risk but does not remove it. ThemeCC does not run or sandbox the code. You are still deciding whether to trust the author.
+
+## Turn mods off
+
+- **One mod:** disable or uninstall its plugin from the **Installed** tab in `/plugin`, or from **Manage plugins** in the desktop app.
+- **All mods for one session:** start Claude Code with `--safe-mode`.
+- **All installed mods, every session:** set `"disableAllHooks": true` in `~/.claude/settings.json`. This also stops your settings hooks and custom status line.
+
+## Report a problem
+
+If you find a listed theme that does more than it declares, open an issue on the [ThemeCC repository](https://github.com/LinXiaoTao/themecc/issues). It will be removed while it is checked.
