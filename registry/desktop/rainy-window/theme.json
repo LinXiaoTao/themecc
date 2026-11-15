@@ -8,7 +8,9 @@
     "en": "It applies at session start in the Code tab, with light and dark variants. Run /rainy-window off to take it off and /rainy-window on to put it back.",
     "zh": "在 Code 标签页的会话开始时自动应用,有浅色和深色两个版本。运行 /rainy-window off 取消,/rainy-window on 恢复。"
   },
-  "author": { "github": "ishuagrawal" },
+  "author": {
+    "github": "ishuagrawal"
+  },
   "license": "MIT",
   "source": {
     "repo": "ishuagrawal/claude-code-themes",
@@ -20,8 +22,14 @@
   "colorScheme": ["light", "dark"],
   "motion": true,
   "tags": ["halftone", "animated", "cozy"],
-  "permissions": { "network": false, "files": false, "commands": false },
-  "preview": { "poster": "poster.webp", "video": "preview.mp4" },
-  "reviewed": { "by": "LinXiaoTao", "at": "2026-11-15" },
+  "permissions": {
+    "network": false,
+    "files": false,
+    "commands": false
+  },
+  "preview": {
+    "poster": "poster.webp",
+    "video": "preview.mp4"
+  },
   "addedAt": "2026-11-15"
 }

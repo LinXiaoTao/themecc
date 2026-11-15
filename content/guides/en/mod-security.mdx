@@ -35,8 +35,8 @@ The `hooks:` and `calls:` lines in the output list the events the mod handles an
 ## How ThemeCC reviews desktop themes
 
 - The entry points to the author's repository at one full commit hash, not a branch. A later change in that repository does not reach you through ThemeCC.
-- A maintainer reads the source at that commit before the theme is merged. The reviewer and date are shown on the theme page.
-- The permissions on the page (network, files, commands) are declared by the maintainers after reading the code.
+- A maintainer reads the source at that commit and records the reviewer and date, which the theme page shows. An entry without a record is marked as not yet reviewed. Read its source yourself before you install it.
+- The permissions on the page (network, files, commands) are declared in the entry. Treat them as a summary and check them against the source when the theme is not marked as reviewed.
 - Obfuscated or minified code is not accepted.
 - To update, the author opens a new pull request with a new hash, and it is reviewed again.
 

@@ -8,7 +8,9 @@
     "en": "It applies at session start. Run /firefly-meadow to switch to it, and /firefly-meadow off to go back to the app's own look.",
     "zh": "会话开始时自动应用。运行 /firefly-meadow 切换到它,/firefly-meadow off 恢复应用原本的外观。"
   },
-  "author": { "github": "amandamartin-dev" },
+  "author": {
+    "github": "amandamartin-dev"
+  },
   "license": "MIT",
   "source": {
     "repo": "amandamartin-dev/claude-mods",
@@ -20,8 +22,13 @@
   "colorScheme": ["dark"],
   "motion": true,
   "tags": ["night", "animated", "dark"],
-  "permissions": { "network": false, "files": true, "commands": false },
-  "preview": { "poster": "poster.webp" },
-  "reviewed": { "by": "LinXiaoTao", "at": "2026-11-15" },
+  "permissions": {
+    "network": false,
+    "files": true,
+    "commands": false
+  },
+  "preview": {
+    "poster": "poster.webp"
+  },
   "addedAt": "2026-11-15"
 }

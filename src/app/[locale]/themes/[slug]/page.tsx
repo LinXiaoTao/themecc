@@ -281,10 +281,12 @@ async function ThemeView({ theme, locale }: { theme: Theme; locale: Locale }) {
         </dl>
         {theme.type === "desktop" ? (
           <p className="text-sm text-muted-foreground">
-            {t("reviewed", {
-              by: `@${theme.reviewed.by}`,
-              date: theme.reviewed.at,
-            })}
+            {theme.reviewed
+              ? t("reviewed", {
+                  by: `@${theme.reviewed.by}`,
+                  date: theme.reviewed.at,
+                })
+              : t("notReviewed")}
           </p>
         ) : null}
         <p>

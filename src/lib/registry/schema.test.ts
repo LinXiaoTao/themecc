@@ -40,6 +40,11 @@ describe("desktopThemeSchema", () => {
     expect(desktopThemeSchema.safeParse(validDesktop).success).toBe(true);
   });
 
+  it("accepts an entry without a review record", () => {
+    const { reviewed: _reviewed, ...unreviewed } = validDesktop;
+    expect(desktopThemeSchema.safeParse(unreviewed).success).toBe(true);
+  });
+
   it("requires a full 40 character sha", () => {
     const result = desktopThemeSchema.safeParse({
       ...validDesktop,

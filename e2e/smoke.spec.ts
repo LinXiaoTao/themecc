@@ -112,7 +112,9 @@ test.describe("themes", () => {
     await expect(
       page.getByRole("heading", { name: "Permissions" }),
     ).toBeVisible();
-    await expect(page.getByText("Reviewed by @")).toBeVisible();
+    await expect(
+      page.getByText("Not yet reviewed by a maintainer"),
+    ).toBeVisible();
     await page.getByRole("button", { name: /Play preview/ }).click();
     await expect(page.locator("video")).toBeVisible();
   });

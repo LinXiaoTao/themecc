@@ -30,7 +30,6 @@ const DESKTOP_EXAMPLE = `{
   "tags": ["space", "dark"],
   "permissions": { "network": false, "files": false, "commands": false },
   "preview": { "poster": "poster.webp", "video": "preview.mp4" },
-  "reviewed": { "by": "maintainer-name", "at": "2026-01-01" },
   "addedAt": "2026-01-01"
 }`;
 

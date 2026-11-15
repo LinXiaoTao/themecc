@@ -99,7 +99,10 @@ export const desktopThemeSchema = z
         video: fileNameSchema.optional(),
       })
       .strict(),
-    reviewed: z.object({ by: githubUserSchema, at: isoDateSchema }).strict(),
+    reviewed: z
+      .object({ by: githubUserSchema, at: isoDateSchema })
+      .strict()
+      .optional(),
     addedAt: isoDateSchema,
   })
   .strict();

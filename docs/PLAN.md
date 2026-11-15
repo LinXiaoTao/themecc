@@ -116,7 +116,7 @@ CLI 主题 `registry/cli/<slug>/theme.json` 使用 Claude Code 官方格式 `{ n
 - 桌面 mod:仅收录链接并固定 sha,不复制源码。激活方式因 mod 而异(`/deep-field`、`/rainy-window on|off` 等),用可选字段 `usage` 记录,没有 `usage` 时显示通用说明。
 - 实际收录:CLI 25 个(`scripts/seed-manifest.ts`,每条保留上游仓库、固定 commit 与版权声明),桌面 3 个(deep-field、firefly-meadow、rainy-window)。
 - 已排除:0toshigami(行为侵入性强)、theme-examples(固定 commit 下使用的 API 已被移除)、matcra587(无许可证)、一个堆砌「50 dark themes」的重复内容仓库。
-- 桌面条目的 `reviewed` 由我只做了表层审查(API 调用检索与 README)后填写,署名为 LinXiaoTao,需要你本人复核后确认。
+- 3 个种子桌面条目没有 `reviewed` 字段:我只做过表层检查(API 调用检索与 README),不能算人工审核,所以页面显示「尚未经过维护者审核」。`reviewed` 是可选字段,由维护者读完固定 commit 的源码后添加;投稿者不要自己添加。站点文案不再声称每个桌面主题都经过审核。
 - 桌面预览是作者自己的截图或视频,页面注明归作者所有。
 - 描述由我们自己撰写。预览:CLI 由令牌渲染的模拟终端生成;桌面主题由我们在真实应用中截取并署名。
 - 种子脚本是一次性手动运行,不做定时抓取,不在运行时请求 GitHub。
