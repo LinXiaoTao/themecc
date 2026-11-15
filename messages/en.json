@@ -121,7 +121,7 @@
     "modWarning": "This is a mod. It runs with the same access as Claude Code and is not sandboxed. To see what it does before you install it, clone its repository and run claude plugin validate on the directory. The hooks and calls lines list its events and requests.",
     "previewPlay": "Play preview",
     "previewAlt": "Preview of {name}",
-    "previewHint": "Preview captured by ThemeCC. Artwork belongs to its author.",
+    "previewHint": "Preview images and videos belong to the theme's author.",
     "terminalHeading": "Preview",
     "terminalNote": "Approximate rendering from the theme's color values. Final colors depend on your terminal and the {base} base theme.",
     "tokensHeading": "Color values",

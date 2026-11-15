@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A soft aqua accent with gentle green, red, and sand status colors from the Everforest palette.",
+    "zh": "来自 Everforest 配色:柔和的水绿色强调色,搭配温和的绿、红、沙色状态色。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Everforest.",
+  "upstream": "https://github.com/sainnhe/everforest",
+  "tags": ["everforest", "green", "dark"],
+  "addedAt": "2026-11-15"
+}

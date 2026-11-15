@@ -2,11 +2,15 @@ import { cache } from "react";
 import { loadThemesOrThrow } from "./load";
 import type { CliTheme, DesktopTheme, Theme, ThemeType } from "./schema";
 
+/** Newest first. On the same day desktop themes come first, then by name. */
 function byNewest(a: Theme, b: Theme): number {
-  if (a.addedAt === b.addedAt) {
-    return a.name.localeCompare(b.name);
+  if (a.addedAt !== b.addedAt) {
+    return a.addedAt < b.addedAt ? 1 : -1;
   }
-  return a.addedAt < b.addedAt ? 1 : -1;
+  if (a.type !== b.type) {
+    return a.type === "desktop" ? -1 : 1;
+  }
+  return a.name.localeCompare(b.name);
 }
 
 export const getAllThemes = cache((): Theme[] => {

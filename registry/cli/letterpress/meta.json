@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A printed-page light theme: ink blue accent, warm paper text, and restrained olive and brick status colors.",
+    "zh": "印刷纸张风格的浅色主题:墨蓝强调色、暖纸色文字,状态色克制,为橄榄绿和砖红。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["paper", "blue", "light"],
+  "addedAt": "2026-11-15"
+}

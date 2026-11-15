@@ -1,0 +1,27 @@
+{
+  "name": "Firefly Meadow",
+  "description": {
+    "en": "A summer night seen from eye level: swaying tall grass, drifting fireflies, twinkling stars, and the odd shooting star.",
+    "zh": "平视视角的夏夜:随风摆动的长草、飘荡的萤火虫、闪烁的星星,偶尔有流星划过。"
+  },
+  "usage": {
+    "en": "It applies at session start. Run /firefly-meadow to switch to it, and /firefly-meadow off to go back to the app's own look.",
+    "zh": "会话开始时自动应用。运行 /firefly-meadow 切换到它,/firefly-meadow off 恢复应用原本的外观。"
+  },
+  "author": { "github": "amandamartin-dev" },
+  "license": "MIT",
+  "source": {
+    "repo": "amandamartin-dev/claude-mods",
+    "path": "firefly-meadow",
+    "sha": "4271efc10c886c2d2fb7613b81d693ba38d54162"
+  },
+  "plugin": "firefly-meadow",
+  "minClaudeCode": "2.1.324",
+  "colorScheme": ["dark"],
+  "motion": true,
+  "tags": ["night", "animated", "dark"],
+  "permissions": { "network": false, "files": true, "commands": false },
+  "preview": { "poster": "poster.webp" },
+  "reviewed": { "by": "LinXiaoTao", "at": "2026-11-15" },
+  "addedAt": "2026-11-15"
+}

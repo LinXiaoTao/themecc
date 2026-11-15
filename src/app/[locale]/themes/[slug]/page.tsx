@@ -197,7 +197,7 @@ async function ThemeView({ theme, locale }: { theme: Theme; locale: Locale }) {
         <p className="max-w-2xl text-muted-foreground">{description}</p>
       </header>
 
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
         <div className="space-y-3">
           {theme.type === "desktop" ? (
             <>

@@ -1,0 +1,14 @@
+{
+  "name": "cli-porcelain",
+  "description": "A clean light theme with a strong blue accent and cool gray text, like glazed white ceramic.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/porcelain",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

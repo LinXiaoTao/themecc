@@ -4,7 +4,7 @@ import type { CliTheme, DesktopTheme, Theme } from "./schema";
 
 type MarketplaceSource =
   | string
-  | { source: "github"; repo: string; sha: string }
+  | { source: "url"; url: string; sha: string }
   | { source: "git-subdir"; url: string; path: string; sha: string };
 
 export type MarketplacePlugin = {
@@ -28,16 +28,21 @@ export type GeneratedFile = {
   contents: string;
 };
 
+/**
+ * Full HTTPS URLs work for everyone. The owner/repo shorthand makes Claude Code
+ * clone over SSH, which fails for users without a GitHub SSH key.
+ */
 function desktopSource(theme: DesktopTheme): MarketplaceSource {
+  const url = `https://github.com/${theme.source.repo}.git`;
   if (theme.source.path) {
     return {
       source: "git-subdir",
-      url: theme.source.repo,
+      url,
       path: theme.source.path,
       sha: theme.source.sha,
     };
   }
-  return { source: "github", repo: theme.source.repo, sha: theme.source.sha };
+  return { source: "url", url, sha: theme.source.sha };
 }
 
 function entryFor(theme: Theme): MarketplacePlugin {
@@ -95,11 +100,9 @@ export function buildCliPluginFiles(theme: CliTheme): GeneratedFile[] {
       : { name: theme.author.name },
     license: theme.license,
     homepage: `${siteConfig.url}/themes/${theme.slug}`,
+    repository: siteConfig.repoUrl,
     experimental: { themes: "./themes/" },
   };
-  if (theme.upstream) {
-    manifest.repository = theme.upstream;
-  }
   return [
     { path: `${dir}/.claude-plugin/plugin.json`, contents: json(manifest) },
     { path: `${dir}/themes/${theme.slug}.json`, contents: json(theme.theme) },

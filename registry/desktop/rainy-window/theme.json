@@ -1,0 +1,27 @@
+{
+  "name": "Rainy Window",
+  "description": {
+    "en": "A halftone-dot room on a rainy day: rain on the window, a spinning record, string lights, and a mascot typing at a desk.",
+    "zh": "雨天的半色调圆点房间:窗外下雨,唱片转动,灯串闪烁,桌前有只吉祥物在打字。"
+  },
+  "usage": {
+    "en": "It applies at session start in the Code tab, with light and dark variants. Run /rainy-window off to take it off and /rainy-window on to put it back.",
+    "zh": "在 Code 标签页的会话开始时自动应用,有浅色和深色两个版本。运行 /rainy-window off 取消,/rainy-window on 恢复。"
+  },
+  "author": { "github": "ishuagrawal" },
+  "license": "MIT",
+  "source": {
+    "repo": "ishuagrawal/claude-code-themes",
+    "path": "themes/rainy-window",
+    "sha": "ae7d9d6d9fb98b2409d26d405dfbc230f2be864a"
+  },
+  "plugin": "rainy-window",
+  "minClaudeCode": "2.1.324",
+  "colorScheme": ["light", "dark"],
+  "motion": true,
+  "tags": ["halftone", "animated", "cozy"],
+  "permissions": { "network": false, "files": false, "commands": false },
+  "preview": { "poster": "poster.webp", "video": "preview.mp4" },
+  "reviewed": { "by": "LinXiaoTao", "at": "2026-11-15" },
+  "addedAt": "2026-11-15"
+}

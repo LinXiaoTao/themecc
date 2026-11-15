@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Cool arctic blues and muted frost tones on a dark base, ported from the Nord palette.",
+    "zh": "来自 Nord 配色的北极蓝和柔和的霜色,基于深色底。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Nord.",
+  "upstream": "https://github.com/nordtheme/nord",
+  "tags": ["nord", "blue", "dark"],
+  "addedAt": "2026-11-15"
+}

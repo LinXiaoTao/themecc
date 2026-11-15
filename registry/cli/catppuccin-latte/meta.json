@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The light Catppuccin flavor, with pastel accents tuned for a white terminal.",
+    "zh": "Catppuccin 的浅色版本,粉彩色针对白色终端调整过。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Catppuccin.",
+  "upstream": "https://github.com/catppuccin/catppuccin",
+  "tags": ["catppuccin", "pastel", "light"],
+  "addedAt": "2026-11-15"
+}

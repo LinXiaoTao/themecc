@@ -1,0 +1,14 @@
+{
+  "name": "cli-dracula",
+  "description": "The official Dracula theme for Claude Code. It uses the ANSI base, so it follows the Dracula palette set in your terminal.",
+  "author": {
+    "name": "Dracula Theme",
+    "url": "https://github.com/dracula"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/dracula",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A muted aqua accent with warm retro red, green, and mustard status colors, based on the Gruvbox palette.",
+    "zh": "基于 Gruvbox 配色:低饱和的水绿色强调色,搭配暖调复古的红、绿、芥末黄状态色。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Gruvbox.",
+  "upstream": "https://github.com/morhetz/gruvbox",
+  "tags": ["gruvbox", "retro", "dark"],
+  "addedAt": "2026-11-15"
+}

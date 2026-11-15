@@ -1,0 +1,14 @@
+{
+  "name": "cli-catppuccin-latte",
+  "description": "The light Catppuccin flavor, with pastel accents tuned for a white terminal.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/catppuccin-latte",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

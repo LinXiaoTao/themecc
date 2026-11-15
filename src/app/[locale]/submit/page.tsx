@@ -14,6 +14,9 @@ const DESKTOP_EXAMPLE = `{
     "en": "A dark palette with a slow starfield behind the conversation.",
     "zh": "深色配色,对话后方有缓慢移动的星空。"
   },
+  "usage": {
+    "en": "Start a new local session in the Code tab. Run /night-sky off to remove it."
+  },
   "author": { "github": "your-github-name" },
   "license": "MIT",
   "source": {

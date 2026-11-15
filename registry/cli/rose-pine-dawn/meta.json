@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The light Rosé Pine variant: soft warm paper tones with muted rose and pine accents.",
+    "zh": "Rosé Pine 的浅色版本:柔和的暖纸色,搭配低饱和的玫瑰色和松绿。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Rosé Pine.",
+  "upstream": "https://github.com/rose-pine/rose-pine-theme",
+  "tags": ["rose-pine", "muted", "light"],
+  "addedAt": "2026-11-15"
+}

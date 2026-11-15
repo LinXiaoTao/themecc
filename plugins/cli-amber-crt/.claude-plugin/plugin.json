@@ -1,0 +1,14 @@
+{
+  "name": "cli-amber-crt",
+  "description": "A monochrome amber phosphor look, like an old CRT terminal. Almost every color is a shade of amber.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/amber-crt",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

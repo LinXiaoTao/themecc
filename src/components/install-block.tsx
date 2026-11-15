@@ -1,10 +1,11 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import {
   cliFileInstallCommand,
   installPlan,
   pluginNameFor,
 } from "@/lib/registry/install";
 import type { Theme } from "@/lib/registry/schema";
+import { pickText } from "@/lib/registry/text";
 import { CopyCommand } from "./copy-command";
 
 type Props = {
@@ -13,6 +14,7 @@ type Props = {
 
 export function InstallBlock({ theme }: Props) {
   const t = useTranslations("Theme");
+  const locale = useLocale();
   const plan = installPlan(theme);
   const copyLabel = t("copy");
   const copiedLabel = t("copied");
@@ -52,7 +54,9 @@ export function InstallBlock({ theme }: Props) {
         <p className="text-sm font-medium">{t("stepActivate")}</p>
         <p className="text-sm text-muted-foreground">
           {theme.type === "desktop"
-            ? t("activateDesktop")
+            ? theme.usage
+              ? pickText(theme.usage, locale)
+              : t("activateDesktop")
             : t("activateCli", { name: theme.name })}
         </p>
       </div>

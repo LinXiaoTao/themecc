@@ -78,6 +78,7 @@ export type PreviewTokens = {
   text: string;
   claude: string;
   subtle: string;
+  inactive: string;
   success: string;
   error: string;
   warning: string;
@@ -93,6 +94,7 @@ const DARK: PreviewTokens = {
   text: "#e6e6e6",
   claude: "#d77757",
   subtle: "#8a8a8a",
+  inactive: "#999999",
   success: "#4eba65",
   error: "#ff6b80",
   warning: "#ffc107",
@@ -108,6 +110,7 @@ const LIGHT: PreviewTokens = {
   text: "#1a1a1a",
   claude: "#d77757",
   subtle: "#666666",
+  inactive: "#666666",
   success: "#2c7a39",
   error: "#ab2b3f",
   warning: "#966c1e",
@@ -122,6 +125,7 @@ const TOKEN_KEYS = [
   "text",
   "claude",
   "subtle",
+  "inactive",
   "success",
   "error",
   "warning",

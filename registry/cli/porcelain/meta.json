@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A clean light theme with a strong blue accent and cool gray text, like glazed white ceramic.",
+    "zh": "干净的浅色主题,醒目的蓝色强调色搭配冷灰色文字,像上过釉的白瓷。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["blue", "clean", "light"],
+  "addedAt": "2026-11-15"
+}

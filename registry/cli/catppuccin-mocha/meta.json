@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The darkest Catppuccin flavor: a pastel blue accent with soft green, red, and yellow status colors.",
+    "zh": "Catppuccin 最深的一款:粉彩蓝色强调色,搭配柔和的绿、红、黄状态色。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Catppuccin.",
+  "upstream": "https://github.com/catppuccin/catppuccin",
+  "tags": ["catppuccin", "pastel", "dark"],
+  "addedAt": "2026-11-15"
+}

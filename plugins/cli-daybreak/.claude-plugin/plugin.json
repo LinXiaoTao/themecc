@@ -1,0 +1,14 @@
+{
+  "name": "cli-daybreak",
+  "description": "A light theme with a calm teal accent and earthy status colors, easy on the eyes in daylight.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/daybreak",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

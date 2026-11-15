@@ -1,0 +1,14 @@
+{
+  "name": "cli-nord",
+  "description": "Cool arctic blues and muted frost tones on a dark base, ported from the Nord palette.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/nord",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

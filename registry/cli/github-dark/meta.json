@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A blue accent with green success and coral error colors, from the GitHub dark palette.",
+    "zh": "来自 GitHub 深色配色:蓝色强调色,成功为绿色,错误为珊瑚红。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: GitHub Primer.",
+  "upstream": "https://github.com/primer/github-vscode-theme",
+  "tags": ["github", "neutral", "dark"],
+  "addedAt": "2026-11-15"
+}

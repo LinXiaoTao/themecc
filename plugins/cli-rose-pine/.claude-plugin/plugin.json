@@ -1,0 +1,14 @@
+{
+  "name": "cli-rose-pine",
+  "description": "A soft foam-blue accent with rose and gold status colors, from the Rosé Pine palette.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/rose-pine",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

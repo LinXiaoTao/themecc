@@ -1,0 +1,361 @@
+{
+  "name": "themecc",
+  "description": "Claude Code desktop and CLI themes collected by ThemeCC. Unofficial, not affiliated with Anthropic.",
+  "owner": {
+    "name": "ThemeCC",
+    "url": "https://themecc.vercel.app"
+  },
+  "plugins": [
+    {
+      "name": "cli-acid-lime",
+      "source": "./plugins/cli-acid-lime",
+      "description": "Electric lime and mint accents with a hot red for errors. High energy, high saturation.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "neon",
+        "green",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-amber-crt",
+      "source": "./plugins/cli-amber-crt",
+      "description": "A monochrome amber phosphor look, like an old CRT terminal. Almost every color is a shade of amber.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "retro",
+        "amber",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-aubade",
+      "source": "./plugins/cli-aubade",
+      "description": "A light theme with an indigo accent and soft warm text, named for a morning song.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "indigo",
+        "soft",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-ayu-dark",
+      "source": "./plugins/cli-ayu-dark",
+      "description": "A sky-blue accent with lime success and orange warning colors, based on the Ayu palette.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "ayu",
+        "orange",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-catppuccin-latte",
+      "source": "./plugins/cli-catppuccin-latte",
+      "description": "The light Catppuccin flavor, with pastel accents tuned for a white terminal.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "catppuccin",
+        "pastel",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-catppuccin-mocha",
+      "source": "./plugins/cli-catppuccin-mocha",
+      "description": "The darkest Catppuccin flavor: a pastel blue accent with soft green, red, and yellow status colors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "catppuccin",
+        "pastel",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-citrus-ink",
+      "source": "./plugins/cli-citrus-ink",
+      "description": "A bright lime accent with warm coral errors and a pale citrus plan-mode color.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "lime",
+        "coral",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-daybreak",
+      "source": "./plugins/cli-daybreak",
+      "description": "A light theme with a calm teal accent and earthy status colors, easy on the eyes in daylight.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "teal",
+        "earthy",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-dracula",
+      "source": "./plugins/cli-dracula",
+      "description": "The official Dracula theme for Claude Code. It uses the ANSI base, so it follows the Dracula palette set in your terminal.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "dracula",
+        "ansi",
+        "official"
+      ]
+    },
+    {
+      "name": "cli-everforest",
+      "source": "./plugins/cli-everforest",
+      "description": "A soft aqua accent with gentle green, red, and sand status colors from the Everforest palette.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "everforest",
+        "green",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-frostbyte",
+      "source": "./plugins/cli-frostbyte",
+      "description": "A light theme in icy blues with a slate text color and cool, readable status colors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "blue",
+        "cool",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-github-dark",
+      "source": "./plugins/cli-github-dark",
+      "description": "A blue accent with green success and coral error colors, from the GitHub dark palette.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "github",
+        "neutral",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-github-light",
+      "source": "./plugins/cli-github-light",
+      "description": "The GitHub light palette, with the familiar blue accent and readable status colors on white.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "github",
+        "neutral",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-gruvbox",
+      "source": "./plugins/cli-gruvbox",
+      "description": "A muted aqua accent with warm retro red, green, and mustard status colors, based on the Gruvbox palette.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "gruvbox",
+        "retro",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-high-contrast",
+      "source": "./plugins/cli-high-contrast",
+      "description": "Pure white text and bright, saturated accents on the dark preset, for maximum readability.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "high-contrast",
+        "accessibility",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-kanagawa",
+      "source": "./plugins/cli-kanagawa",
+      "description": "Muted ink-blue and wave colors inspired by Hokusai's The Great Wave off Kanagawa.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "kanagawa",
+        "muted",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-letterpress",
+      "source": "./plugins/cli-letterpress",
+      "description": "A printed-page light theme: ink blue accent, warm paper text, and restrained olive and brick status colors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "paper",
+        "blue",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-matcha-zen",
+      "source": "./plugins/cli-matcha-zen",
+      "description": "A calm light theme in teal and green with warm text, inspired by matcha and quiet tea rooms.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "green",
+        "calm",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-nord",
+      "source": "./plugins/cli-nord",
+      "description": "Cool arctic blues and muted frost tones on a dark base, ported from the Nord palette.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "nord",
+        "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-porcelain",
+      "source": "./plugins/cli-porcelain",
+      "description": "A clean light theme with a strong blue accent and cool gray text, like glazed white ceramic.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "blue",
+        "clean",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-rose-pine",
+      "source": "./plugins/cli-rose-pine",
+      "description": "A soft foam-blue accent with rose and gold status colors, from the Rosé Pine palette.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "rose-pine",
+        "muted",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-rose-pine-dawn",
+      "source": "./plugins/cli-rose-pine-dawn",
+      "description": "The light Rosé Pine variant: soft warm paper tones with muted rose and pine accents.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "rose-pine",
+        "muted",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-solarized-dark",
+      "source": "./plugins/cli-solarized-dark",
+      "description": "A blue accent with muted green, red, and yellow status colors from the Solarized palette, tuned for low contrast.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "solarized",
+        "teal",
+        "dark"
+      ]
+    },
+    {
+      "name": "cli-solarized-light",
+      "source": "./plugins/cli-solarized-light",
+      "description": "The light Solarized theme: a warm cream feel with carefully balanced accent colors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "solarized",
+        "cream",
+        "light"
+      ]
+    },
+    {
+      "name": "cli-tokyo-night",
+      "source": "./plugins/cli-tokyo-night",
+      "description": "A soft blue accent with green success and pink-red error colors, from the Tokyo Night palette.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "tokyo-night",
+        "blue",
+        "dark"
+      ]
+    },
+    {
+      "name": "deep-field",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/amandamartin-dev/claude-mods.git",
+        "path": "deep-field",
+        "sha": "4271efc10c886c2d2fb7613b81d693ba38d54162"
+      },
+      "description": "A self-playing asteroid field drifts behind the conversation, with dark frosted panels and cyan and orange accents.",
+      "license": "MIT",
+      "tags": [
+        "desktop",
+        "space",
+        "animated",
+        "dark"
+      ]
+    },
+    {
+      "name": "firefly-meadow",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/amandamartin-dev/claude-mods.git",
+        "path": "firefly-meadow",
+        "sha": "4271efc10c886c2d2fb7613b81d693ba38d54162"
+      },
+      "description": "A summer night seen from eye level: swaying tall grass, drifting fireflies, twinkling stars, and the odd shooting star.",
+      "license": "MIT",
+      "tags": [
+        "desktop",
+        "night",
+        "animated",
+        "dark"
+      ]
+    },
+    {
+      "name": "rainy-window",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ishuagrawal/claude-code-themes.git",
+        "path": "themes/rainy-window",
+        "sha": "ae7d9d6d9fb98b2409d26d405dfbc230f2be864a"
+      },
+      "description": "A halftone-dot room on a rainy day: rain on the window, a spinning record, string lights, and a mascot typing at a desk.",
+      "license": "MIT",
+      "tags": [
+        "desktop",
+        "halftone",
+        "animated",
+        "cozy"
+      ]
+    }
+  ]
+}

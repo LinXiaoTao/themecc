@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A sky-blue accent with lime success and orange warning colors, based on the Ayu palette.",
+    "zh": "基于 Ayu 配色:天蓝色强调色,成功为青柠绿,警告为橙色。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Ayu.",
+  "upstream": "https://github.com/ayu-theme/ayu-colors",
+  "tags": ["ayu", "orange", "dark"],
+  "addedAt": "2026-11-15"
+}

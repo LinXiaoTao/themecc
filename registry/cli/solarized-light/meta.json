@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The light Solarized theme: a warm cream feel with carefully balanced accent colors.",
+    "zh": "Solarized 的浅色版本:偏暖的奶油色调,强调色经过仔细平衡。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Solarized.",
+  "upstream": "https://ethanschoonover.com/solarized/",
+  "tags": ["solarized", "cream", "light"],
+  "addedAt": "2026-11-15"
+}

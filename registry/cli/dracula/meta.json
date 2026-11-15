@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The official Dracula theme for Claude Code. It uses the ANSI base, so it follows the Dracula palette set in your terminal.",
+    "zh": "Claude Code 的官方 Dracula 主题。它基于 ANSI 预设,颜色跟随终端里设置的 Dracula 调色板。"
+  },
+  "author": {
+    "name": "Dracula Theme",
+    "github": "dracula"
+  },
+  "license": "MIT",
+  "attribution": "Copied from dracula/claude-code-cli at 5e70448 (MIT, Copyright (c) 2026 Dracula Theme). Palette: Dracula.",
+  "upstream": "https://draculatheme.com",
+  "tags": ["dracula", "ansi", "official"],
+  "addedAt": "2026-11-15"
+}

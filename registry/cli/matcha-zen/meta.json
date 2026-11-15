@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A calm light theme in teal and green with warm text, inspired by matcha and quiet tea rooms.",
+    "zh": "平静的浅色主题,青绿色调搭配暖色文字,灵感来自抹茶和安静的茶室。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["green", "calm", "light"],
+  "addedAt": "2026-11-15"
+}

@@ -20,32 +20,31 @@ export function TerminalPreview({ theme, label, compact = false }: Props) {
     >
       <div className="space-y-1 px-3 py-3 sm:px-4">
         <div style={{ color: c.claude }}>
-          ✻ Claude Code <span style={{ color: c.subtle }}>v2.1</span>
+          ✻ Claude Code <span style={{ color: c.inactive }}>v2.1</span>
         </div>
         <div
           className="rounded px-2 py-1"
           style={{ background: c.userMessageBackground }}
         >
-          &gt; Add input validation to the signup form
+          &gt; Add input validation
         </div>
         <div>
           <span style={{ color: c.claude }}>●</span> I&apos;ll read the form
-          component first.
+          first.
         </div>
-        <div style={{ color: c.subtle }}>
-          &nbsp;&nbsp;⎿ Read src/components/signup.tsx (84 lines)
+        <div style={{ color: c.inactive }}>
+          &nbsp;&nbsp;⎿ Read signup.tsx (84 lines)
         </div>
         {compact ? null : (
           <>
             <div>
-              <span style={{ color: c.success }}>●</span>{" "}
-              Update(src/components/signup.tsx)
+              <span style={{ color: c.success }}>●</span> Update(signup.tsx)
             </div>
             <div style={{ background: c.diffRemoved }} className="px-2">
               - const email = form.email;
             </div>
             <div style={{ background: c.diffAdded }} className="px-2">
-              + const email = emailSchema.parse(form.email);
+              + const email = parse(form.email);
             </div>
             <div>
               <span style={{ color: c.error }}>✗</span> 1 test failed{" "}

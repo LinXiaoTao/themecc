@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A light theme with an indigo accent and soft warm text, named for a morning song.",
+    "zh": "靛蓝强调色配柔和暖色文字的浅色主题,名字取自晨曲。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["indigo", "soft", "light"],
+  "addedAt": "2026-11-15"
+}

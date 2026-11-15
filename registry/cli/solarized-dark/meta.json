@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A blue accent with muted green, red, and yellow status colors from the Solarized palette, tuned for low contrast.",
+    "zh": "来自 Solarized 配色:蓝色强调色,搭配低饱和的绿、红、黄状态色,整体对比度较低。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Solarized.",
+  "upstream": "https://ethanschoonover.com/solarized/",
+  "tags": ["solarized", "teal", "dark"],
+  "addedAt": "2026-11-15"
+}

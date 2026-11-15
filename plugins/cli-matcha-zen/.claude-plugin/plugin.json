@@ -1,0 +1,14 @@
+{
+  "name": "cli-matcha-zen",
+  "description": "A calm light theme in teal and green with warm text, inspired by matcha and quiet tea rooms.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/matcha-zen",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

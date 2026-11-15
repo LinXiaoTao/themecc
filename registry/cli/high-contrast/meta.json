@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Pure white text and bright, saturated accents on the dark preset, for maximum readability.",
+    "zh": "在深色预设上使用纯白文字和明亮饱和的强调色,可读性优先。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors).",
+  "upstream": "https://github.com/livlign/ccthemes",
+  "tags": ["high-contrast", "accessibility", "dark"],
+  "addedAt": "2026-11-15"
+}

@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A soft foam-blue accent with rose and gold status colors, from the Rosé Pine palette.",
+    "zh": "来自 Rosé Pine 配色:柔和的泡沫蓝强调色,搭配玫瑰色和金色状态色。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Rosé Pine.",
+  "upstream": "https://github.com/rose-pine/rose-pine-theme",
+  "tags": ["rose-pine", "muted", "dark"],
+  "addedAt": "2026-11-15"
+}

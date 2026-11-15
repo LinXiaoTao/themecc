@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "The GitHub light palette, with the familiar blue accent and readable status colors on white.",
+    "zh": "GitHub 浅色配色:熟悉的蓝色强调色,白底上状态色清晰易读。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: GitHub Primer.",
+  "upstream": "https://github.com/primer/github-vscode-theme",
+  "tags": ["github", "neutral", "light"],
+  "addedAt": "2026-11-15"
+}

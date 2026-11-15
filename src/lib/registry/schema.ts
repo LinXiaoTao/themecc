@@ -71,6 +71,7 @@ export const desktopThemeSchema = z
   .object({
     name: z.string().min(1).max(60),
     description: localizedTextSchema(280),
+    usage: localizedTextSchema(280).optional(),
     author: z.object({ github: githubUserSchema }).strict(),
     license: licenseSchema,
     source: z

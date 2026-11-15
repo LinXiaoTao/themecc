@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "A soft blue accent with green success and pink-red error colors, from the Tokyo Night palette.",
+    "zh": "来自 Tokyo Night 配色:柔和的蓝色强调色,成功为绿色,错误为粉红色。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Tokyo Night.",
+  "upstream": "https://github.com/enkia/tokyo-night-vscode-theme",
+  "tags": ["tokyo-night", "blue", "dark"],
+  "addedAt": "2026-11-15"
+}

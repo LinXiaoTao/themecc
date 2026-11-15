@@ -1,0 +1,14 @@
+{
+  "name": "cli-gruvbox",
+  "description": "A muted aqua accent with warm retro red, green, and mustard status colors, based on the Gruvbox palette.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/gruvbox",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

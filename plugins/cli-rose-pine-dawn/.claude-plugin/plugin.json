@@ -1,0 +1,14 @@
+{
+  "name": "cli-rose-pine-dawn",
+  "description": "The light Rosé Pine variant: soft warm paper tones with muted rose and pine accents.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/rose-pine-dawn",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}

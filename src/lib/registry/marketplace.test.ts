@@ -80,20 +80,20 @@ describe("buildMarketplace", () => {
     expect(marketplace.name).toBe("themecc");
     expect(marketplace.plugins[0]?.source).toEqual({
       source: "git-subdir",
-      url: "example/themes",
+      url: "https://github.com/example/themes.git",
       path: "themes/rainy-window",
       sha: "b".repeat(40),
     });
   });
 
-  it("uses the github source when there is no subdirectory", () => {
+  it("uses the url source when there is no subdirectory", () => {
     const rootTheme: DesktopTheme = {
       ...desktop,
       source: { repo: "example/rainy", sha: "c".repeat(40) },
     };
     expect(buildMarketplace([rootTheme]).plugins[0]?.source).toEqual({
-      source: "github",
-      repo: "example/rainy",
+      source: "url",
+      url: "https://github.com/example/rainy.git",
       sha: "c".repeat(40),
     });
   });

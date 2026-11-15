@@ -16,7 +16,8 @@
     "registry:build": "tsx scripts/registry-build.ts",
     "lint:fix": "biome check --write",
     "prebuild": "tsx scripts/sync-previews.ts",
-    "predev": "tsx scripts/sync-previews.ts"
+    "predev": "tsx scripts/sync-previews.ts",
+    "registry:seed": "tsx scripts/seed-registry.ts"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

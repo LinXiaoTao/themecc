@@ -1,0 +1,15 @@
+{
+  "description": {
+    "en": "Muted ink-blue and wave colors inspired by Hokusai's The Great Wave off Kanagawa.",
+    "zh": "灵感来自北斋《神奈川冲浪里》的低饱和墨色与海浪色。"
+  },
+  "author": {
+    "name": "livlign",
+    "github": "livlign"
+  },
+  "license": "MIT",
+  "attribution": "Copied from livlign/ccthemes at a4f7528 (MIT, Copyright (c) ccthemes contributors). Palette: Kanagawa.",
+  "upstream": "https://github.com/rebelot/kanagawa.nvim",
+  "tags": ["kanagawa", "muted", "dark"],
+  "addedAt": "2026-11-15"
+}

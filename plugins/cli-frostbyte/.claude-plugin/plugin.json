@@ -1,0 +1,14 @@
+{
+  "name": "cli-frostbyte",
+  "description": "A light theme in icy blues with a slate text color and cool, readable status colors.",
+  "author": {
+    "name": "livlign",
+    "url": "https://github.com/livlign"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/frostbyte",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}
