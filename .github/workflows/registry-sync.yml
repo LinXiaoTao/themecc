@@ -12,6 +12,9 @@ on:
       - scripts/registry-build.ts
       - src/lib/registry/**
       - src/config/site.ts
+  # A merge made with GITHUB_TOKEN does not trigger the push event, so
+  # registry-automerge dispatches this workflow explicitly.
+  workflow_dispatch:
 
 permissions:
   contents: write

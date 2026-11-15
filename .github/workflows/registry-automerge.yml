@@ -13,6 +13,7 @@ on:
     types: [completed]
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
 
@@ -57,3 +58,5 @@ jobs:
             exit 0
           fi
           gh pr merge "$pr" --repo "$REPO" --squash --match-head-commit "$HEAD_SHA"
+          # Pushes made with GITHUB_TOKEN do not trigger other workflows.
+          gh workflow run registry-sync.yml --repo "$REPO" --ref main
