@@ -187,6 +187,18 @@
       ]
     },
     {
+      "name": "cli-ink-and-ember",
+      "source": "./plugins/cli-ink-and-ember",
+      "description": "Warm ember orange on a brown-gray palette, with olive success and a soft coral for errors.",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "orange",
+        "warm",
+        "dark"
+      ]
+    },
+    {
       "name": "cli-kanagawa",
       "source": "./plugins/cli-kanagawa",
       "description": "Muted ink-blue and wave colors inspired by Hokusai's The Great Wave off Kanagawa.",

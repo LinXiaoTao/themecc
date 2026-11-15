@@ -1,0 +1,14 @@
+{
+  "name": "cli-ink-and-ember",
+  "description": "Warm ember orange on a brown-gray palette, with olive success and a soft coral for errors.",
+  "author": {
+    "name": "LinXiaoTao",
+    "url": "https://github.com/LinXiaoTao"
+  },
+  "license": "MIT",
+  "homepage": "https://themecc.vercel.app/themes/ink-and-ember",
+  "repository": "https://github.com/LinXiaoTao/themecc",
+  "experimental": {
+    "themes": "./themes/"
+  }
+}
