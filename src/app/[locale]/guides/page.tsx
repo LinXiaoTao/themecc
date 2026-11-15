@@ -37,14 +37,18 @@ export default async function GuidesPage({
   return (
     <div className="space-y-8">
       <header className="space-y-3">
-        <h1 className="text-3xl font-bold tracking-tight">{t("heading")}</h1>
-        <p className="max-w-2xl text-muted-foreground">{t("lead")}</p>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          {t("heading")}
+        </h1>
+        <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          {t("lead")}
+        </p>
       </header>
       <ul className="grid gap-4 sm:grid-cols-2">
         {guides.map((guide) => (
           <li
             key={guide.slug}
-            className="relative rounded-lg border border-border bg-card p-5 transition-colors hover:border-foreground/40"
+            className="relative rounded-2xl border border-border bg-card p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-foreground/25 hover:shadow-card-hover"
           >
             <h2 className="font-semibold leading-snug">
               <Link

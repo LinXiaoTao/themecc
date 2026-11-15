@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { primaryButton } from "@/components/button-styles";
 import { OutboundLink } from "@/components/outbound-link";
 import { siteConfig } from "@/config/site";
 import { routing } from "@/i18n/routing";
@@ -73,12 +74,14 @@ export default async function SubmitPage({
   return (
     <div className="space-y-10">
       <header className="space-y-3">
-        <h1 className="text-3xl font-bold tracking-tight">{t("heading")}</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          {t("heading")}
+        </h1>
         <p className="max-w-2xl text-muted-foreground">{t("lead")}</p>
         <OutboundLink
           href={siteConfig.repoUrl}
           event={{ name: "submit_click", params: { placement: "submit_page" } }}
-          className="inline-block rounded-md bg-accent px-4 py-2 text-sm font-medium text-accent-foreground hover:opacity-90"
+          className={primaryButton}
         >
           {t("open")}
         </OutboundLink>
@@ -86,7 +89,7 @@ export default async function SubmitPage({
 
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">{t("stepsHeading")}</h2>
-        <ol className="list-decimal space-y-2 pl-5">
+        <ol className="list-decimal space-y-2 pl-5 marker:font-mono marker:text-accent">
           {steps.map((step) => (
             <li key={step}>{step}</li>
           ))}
@@ -98,13 +101,13 @@ export default async function SubmitPage({
         <p className="max-w-3xl text-muted-foreground">{t("desktopBody")}</p>
         <p className="font-mono text-sm">{t("desktopFiles")}</p>
         <h3 className="font-semibold">{t("desktopRules")}</h3>
-        <ul className="list-disc space-y-1 pl-5">
+        <ul className="list-disc space-y-1 pl-5 marker:text-accent">
           {desktopRules.map((rule) => (
             <li key={rule}>{rule}</li>
           ))}
         </ul>
         <h3 className="font-semibold">{t("example")}</h3>
-        <pre className="overflow-x-auto rounded-lg border border-border bg-card p-4 font-mono text-sm leading-relaxed">
+        <pre className="overflow-x-auto rounded-xl border border-border bg-card p-4 font-mono text-sm leading-relaxed">
           <code>{DESKTOP_EXAMPLE}</code>
         </pre>
       </section>
@@ -114,7 +117,7 @@ export default async function SubmitPage({
         <p className="max-w-3xl text-muted-foreground">{t("cliBody")}</p>
         <p className="font-mono text-sm">{t("cliFiles")}</p>
         <h3 className="font-semibold">{t("cliRules")}</h3>
-        <ul className="list-disc space-y-1 pl-5">
+        <ul className="list-disc space-y-1 pl-5 marker:text-accent">
           {cliRules.map((rule) => (
             <li key={rule}>{rule}</li>
           ))}

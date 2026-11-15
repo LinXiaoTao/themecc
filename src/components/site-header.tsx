@@ -1,7 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import { siteConfig } from "@/config/site";
 import { Link } from "@/i18n/navigation";
+import { GithubIcon } from "./icons";
 import { LocaleSwitcher } from "./locale-switcher";
+import { LogoMark } from "./logo-mark";
+import { NavLinks } from "./nav-links";
 
 export async function SiteHeader() {
   const t = await getTranslations("Nav");
@@ -13,37 +16,33 @@ export async function SiteHeader() {
   ] as const;
 
   return (
-    <header className="border-b border-border">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
+    <header className="sticky top-0 z-40 border-b border-border/70 bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2.5 sm:px-6">
         <Link
           href="/"
           aria-label={t("home")}
-          className="font-mono text-lg font-semibold tracking-tight"
+          className="order-1 flex items-center gap-2 font-mono text-lg font-semibold tracking-tight"
         >
+          <LogoMark className="size-7" />
           {siteConfig.name}
         </Link>
         <nav
           aria-label="Main"
-          className="flex flex-1 flex-wrap items-center gap-x-4 gap-y-1 text-sm"
+          className="order-3 -mx-1 flex w-full items-center gap-1 overflow-x-auto px-1 text-sm md:order-2 md:mx-0 md:w-auto md:flex-1 md:overflow-visible md:px-0"
         >
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="py-1 text-muted-foreground hover:text-foreground"
-            >
-              {link.label}
-            </Link>
-          ))}
+          <NavLinks items={links} />
+        </nav>
+        <div className="order-2 ml-auto flex items-center gap-2 md:order-3">
           <a
             href={siteConfig.repoUrl}
-            className="py-1 text-muted-foreground hover:text-foreground"
             rel="noopener"
+            aria-label={t("github")}
+            className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
           >
-            {t("github")}
+            <GithubIcon className="size-5" />
           </a>
-        </nav>
-        <LocaleSwitcher label={t("language")} />
+          <LocaleSwitcher label={t("language")} />
+        </div>
       </div>
     </header>
   );

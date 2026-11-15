@@ -5,19 +5,35 @@ type Props = {
   theme: CliThemeFile;
   label: string;
   compact?: boolean;
+  className?: string;
 };
 
 /** A static mock of a Claude Code session, colored from the theme's values. */
-export function TerminalPreview({ theme, label, compact = false }: Props) {
+export function TerminalPreview({
+  theme,
+  label,
+  compact = false,
+  className = "",
+}: Props) {
   const c = previewTokens(theme);
   return (
     <div
       role="img"
       aria-label={label}
       aria-hidden={label === "" ? true : undefined}
-      className="overflow-hidden rounded-lg border border-border font-mono text-[12px] leading-[1.55] sm:text-[13px]"
+      className={`overflow-hidden rounded-xl border border-border font-mono text-[12px] leading-[1.55] shadow-card sm:text-[13px] ${className}`}
       style={{ background: c.background, color: c.text }}
     >
+      <div
+        className="flex items-center gap-1.5 px-3 py-2"
+        style={{
+          background: `color-mix(in srgb, ${c.text} 7%, ${c.background})`,
+        }}
+      >
+        <span className="size-2.5 rounded-full bg-[#ff5f57]" />
+        <span className="size-2.5 rounded-full bg-[#febc2e]" />
+        <span className="size-2.5 rounded-full bg-[#28c840]" />
+      </div>
       <div className="space-y-1 px-3 py-3 sm:px-4">
         <div style={{ color: c.claude }}>
           ✻ Claude Code <span style={{ color: c.inactive }}>v2.1</span>

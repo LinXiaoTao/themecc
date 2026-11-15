@@ -10,6 +10,7 @@ import { SiteHeader } from "@/components/site-header";
 import { isProductionDeployment, siteConfig } from "@/config/site";
 import { routing } from "@/i18n/routing";
 import { CONSENT_STORAGE_KEY } from "@/lib/analytics";
+import { REGION_COOKIE } from "@/lib/consent-region";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -54,6 +55,10 @@ export async function generateMetadata({
     robots: isProductionDeployment
       ? { index: true, follow: true }
       : { index: false, follow: false },
+    icons: {
+      icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+      apple: "/apple-icon.png",
+    },
     verification,
   };
 }
@@ -78,7 +83,8 @@ export default async function LocaleLayout({
       lang={locale === "zh" ? "zh-Hans" : locale}
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
-      <body className="flex min-h-screen flex-col">
+      <body className="relative isolate flex min-h-screen flex-col">
+        <div aria-hidden="true" className="hero-backdrop" />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-background focus:px-3 focus:py-2"
@@ -87,7 +93,10 @@ export default async function LocaleLayout({
         </a>
         <NextIntlClientProvider>
           <SiteHeader />
-          <main id="main" className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
+          <main
+            id="main"
+            className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6"
+          >
             {children}
           </main>
           <SiteFooter />
@@ -96,6 +105,7 @@ export default async function LocaleLayout({
               <GoogleAnalytics
                 measurementId={analyticsId}
                 storageKey={CONSENT_STORAGE_KEY}
+                regionCookie={REGION_COOKIE}
               />
               <ConsentBanner
                 message={tc("message")}

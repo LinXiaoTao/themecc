@@ -43,13 +43,13 @@ export async function ThemeListPage({ type, locale }: Props) {
     <div className="space-y-8">
       <JsonLd data={jsonLd} />
       <header className="space-y-3">
-        <h1 className="text-3xl font-bold tracking-tight">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           {isDesktop ? t("desktopHeading") : t("cliHeading")}
         </h1>
-        <p className="max-w-3xl text-muted-foreground">
+        <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
           {isDesktop ? t("desktopLead") : t("cliLead")}
         </p>
-        <p className="max-w-3xl text-sm text-muted-foreground">
+        <p className="max-w-3xl rounded-xl border border-border bg-card px-4 py-3 text-sm text-muted-foreground shadow-sm">
           <strong className="font-medium text-foreground">
             {t("requirements")}:{" "}
           </strong>

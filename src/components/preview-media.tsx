@@ -35,7 +35,7 @@ export function PreviewMedia({
         height={HEIGHT}
         priority={priority}
         sizes="(min-width: 1024px) 640px, 100vw"
-        className="aspect-video w-full rounded-lg border border-border object-cover"
+        className="aspect-video w-full rounded-2xl border border-border object-cover shadow-card"
       />
     );
   }
@@ -51,7 +51,7 @@ export function PreviewMedia({
         muted
         playsInline
         aria-label={alt}
-        className="aspect-video w-full rounded-lg border border-border bg-black object-cover"
+        className="aspect-video w-full rounded-2xl border border-border bg-black object-cover"
       />
     );
   }
@@ -64,7 +64,7 @@ export function PreviewMedia({
         setPlaying(true);
       }}
       aria-label={`${playLabel}: ${alt}`}
-      className="group relative block w-full overflow-hidden rounded-lg border border-border"
+      className="group relative block w-full overflow-hidden rounded-2xl border border-border"
     >
       <Image
         src={poster}

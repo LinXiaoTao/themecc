@@ -1,7 +1,7 @@
 export const meta = {
   title: "Privacy",
   description:
-    "What ThemeCC collects: anonymous usage statistics through Google Analytics only if you accept, and nothing else. No accounts, no ads, no payments.",
+    "What ThemeCC collects: anonymous usage statistics through Google Analytics (with your consent where the law requires it), and nothing else. No accounts, no ads, no payments.",
   updated: "2026-11-15",
 };
 
@@ -11,9 +11,11 @@ ThemeCC has no accounts, no comments, no ads, and no payments. We do not ask you
 
 The site uses Google Analytics 4 to count visits and how often install commands are copied. We use it to see which pages and themes are useful.
 
-- Analytics storage is **denied by default**. Google Analytics sets cookies only after you choose **Accept** in the banner.
-- If you choose **Decline**, the Google Analytics script still loads, but it is told not to store anything on your device. Google may still receive limited, cookieless signals such as the page address and your approximate location from your IP address.
+- In the EEA, the United Kingdom, and Switzerland, analytics storage is **denied by default**. Google Analytics sets cookies only after you choose **Accept** in the banner. If you choose **Decline**, the script still loads but is told not to store anything on your device. Google may still receive limited, cookieless signals such as the page address and your approximate location from your IP address.
+- Elsewhere there is no banner and Google Analytics sets cookies by default. To avoid this, block the script with a browser extension or use [Google's opt-out add-on](https://tools.google.com/dlpage/gaoptout).
+- We decide which of these applies from the country of your IP address, using a header from our host. We keep the result in a session cookie named `themecc-region` that holds only `consent` or `open`. If the country is unknown, we ask for consent.
 - Your choice is stored in your browser's local storage under the key `themecc-consent`. Clearing site data asks you again.
+- We turn off Google signals and ad personalization, and we do not use the data for advertising.
 - The events we record are: install and marketplace command copies, preview plays, outbound clicks to a theme's repository, submit clicks, and filter use. They contain the theme name and type, not anything about you.
 
 Preview deployments of the site and local builds do not load analytics.

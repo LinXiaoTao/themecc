@@ -144,7 +144,7 @@ CI 使用 GitHub 内置 `GITHUB_TOKEN`,不新增密钥。
 
 ## 7. 统计与事件
 
-GA4 使用 Consent Mode v2,默认拒绝,页面带简洁的同意横幅。自写 `GoogleAnalytics` 组件,只在生产部署加载(`VERCEL_ENV`),`localStorage` 里 `themecc-consent` 为 `granted` 时才授予 `analytics_storage`。预览部署为 noindex 且不加载统计。
+GA4 使用 Consent Mode v2。EEA、英国、瑞士及未知地区默认拒绝并显示同意横幅,其他地区默认授予、无横幅;`proxy.ts` 依据 `x-vercel-ip-country` 写入会话 Cookie `themecc-region`。关闭 Google 信号和广告个性化。自写 `GoogleAnalytics` 组件,只在生产部署加载(`VERCEL_ENV`)。预览部署为 noindex 且不加载统计。
 
 | 事件                   | 触发点                    | 参数                     |
 | ---------------------- | ------------------------- | ------------------------ |
@@ -175,7 +175,7 @@ GA4 使用 Consent Mode v2,默认拒绝,页面带简洁的同意横幅。自写 
 ## 10. 合规
 
 - 页脚声明:非 Anthropic 官方,不隶属于 Anthropic。不使用 Claude Logo 和 Clawd 形象。
-- 隐私政策、使用条款、Cookie 同意(目标市场含欧盟和英国)。
+- 隐私政策、使用条款。Cookie 同意横幅按地区显示(欧盟、英国、瑞士)。
 - 投稿者须声明拥有预览素材的权利。提供下架和举报联系方式。
 - 字体使用系统字体栈或可商用开源字体。
 

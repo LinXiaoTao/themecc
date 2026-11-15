@@ -15,11 +15,7 @@ export const CONSENT_STORAGE_KEY = "themecc-consent";
 
 type Gtag = {
   (command: "event", name: string, params: Record<string, string>): void;
-  (
-    command: "consent",
-    action: "default" | "update",
-    params: Record<string, string>,
-  ): void;
+  (command: "consent", action: "update", params: Record<string, string>): void;
 };
 
 declare global {

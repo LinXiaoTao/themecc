@@ -46,7 +46,7 @@
 |----|----|
 | Measurement ID | `G-DJ210WN6HK`(只存在于 Vercel Production 环境变量 `NEXT_PUBLIC_GA_MEASUREMENT_ID`,不写入代码默认值) |
 | 数据流 | ThemeCC web:`https://themecc.vercel.app` |
-| 同意模式 | Consent Mode v2,默认 denied,`localStorage` 键 `themecc-consent` |
+| 同意模式 | Consent Mode v2。EEA、英国、瑞士及未知地区默认 denied 并显示横幅;其他地区默认 granted、无横幅。地区由 `proxy.ts` 读 `x-vercel-ip-country` 后写入会话 Cookie `themecc-region`;选择保存在 `localStorage` 键 `themecc-consent`。关闭 Google 信号和广告个性化 |
 | 与 GSC 关联 | 2026-11-15 已创建(Link created) |
 | 待办 | `copy_install` 事件出现在 Events 报告后,将其标记为关键事件;GSC 数据最多 48 小时后出现在 GA 的 Search Console 报告 |
 

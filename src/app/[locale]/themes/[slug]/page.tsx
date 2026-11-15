@@ -176,7 +176,7 @@ async function ThemeView({ theme, locale }: { theme: Theme; locale: Locale }) {
   };
 
   return (
-    <article className="space-y-10">
+    <article className="space-y-12">
       <JsonLd data={jsonLd} />
       <header className="space-y-3">
         <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground">
@@ -189,12 +189,16 @@ async function ThemeView({ theme, locale }: { theme: Theme; locale: Locale }) {
           </Link>
         </nav>
         <div className="flex flex-wrap items-center gap-3">
-          <h1 className="text-3xl font-bold tracking-tight">{theme.name}</h1>
-          <span className="rounded-full border border-border px-2.5 py-0.5 text-xs">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            {theme.name}
+          </h1>
+          <span className="rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent">
             {typeLabel}
           </span>
         </div>
-        <p className="max-w-2xl text-muted-foreground">{description}</p>
+        <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          {description}
+        </p>
       </header>
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
@@ -235,7 +239,10 @@ async function ThemeView({ theme, locale }: { theme: Theme; locale: Locale }) {
 
       {theme.type === "desktop" ? <PermissionsSection theme={theme} /> : null}
 
-      <section aria-labelledby="details-heading" className="space-y-3">
+      <section
+        aria-labelledby="details-heading"
+        className="space-y-4 rounded-2xl border border-border bg-card p-6 shadow-card"
+      >
         <h2 id="details-heading" className="text-xl font-semibold">
           {t("details")}
         </h2>
@@ -328,7 +335,7 @@ async function PermissionsSection({ theme }: { theme: DesktopTheme }) {
   return (
     <section
       aria-labelledby="permissions-heading"
-      className="space-y-3 rounded-lg border border-border bg-muted/50 p-5"
+      className="space-y-3 rounded-2xl border border-accent/30 bg-accent-soft/60 p-6"
     >
       <h2 id="permissions-heading" className="text-xl font-semibold">
         {t("permissionsHeading")}

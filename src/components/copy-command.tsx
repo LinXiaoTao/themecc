@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { type AnalyticsEvent, trackEvent } from "@/lib/analytics";
+import { CheckIcon, CopyIcon } from "./icons";
 
 type Props = {
   command: string;
@@ -37,16 +38,21 @@ export function CopyCommand({ command, copyLabel, copiedLabel, event }: Props) {
   }
 
   return (
-    <div className="flex items-stretch overflow-hidden rounded-lg border border-border bg-card">
-      <code className="min-w-0 flex-1 overflow-x-auto whitespace-pre px-3 py-2.5 font-mono text-sm">
+    <div className="flex items-stretch overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+      <code className="min-w-0 flex-1 overflow-x-auto whitespace-pre px-4 py-3 font-mono text-sm">
         {command}
       </code>
       <button
         type="button"
         onClick={copy}
-        className="shrink-0 border-l border-border px-3 text-sm font-medium hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-accent"
+        className="flex shrink-0 items-center gap-1.5 border-l border-border bg-muted/60 px-3.5 text-sm font-medium transition-colors hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-accent"
         aria-live="polite"
       >
+        {copied ? (
+          <CheckIcon className="size-4 text-accent" />
+        ) : (
+          <CopyIcon className="size-4" />
+        )}
         {copied ? copiedLabel : copyLabel}
       </button>
     </div>

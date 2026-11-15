@@ -34,6 +34,7 @@
     "source": "Source on GitHub"
   },
   "Home": {
+    "eyebrow": "Unofficial · Open source",
     "heading": "Claude Code themes, with previews and one-command install",
     "lead": "A collection of desktop animated themes and CLI color themes. Every entry shows its version requirement and, for desktop mods, the permissions it uses.",
     "addMarketplaceTitle": "Add ThemeCC once",

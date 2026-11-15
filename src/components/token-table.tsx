@@ -28,9 +28,9 @@ export function TokenTable({ theme }: Props) {
       <h2 id="tokens-heading" className="text-xl font-semibold">
         {t("tokensHeading")}
       </h2>
-      <div className="overflow-x-auto rounded-lg border border-border">
+      <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-card">
         <table className="w-full text-sm">
-          <thead className="bg-muted text-left">
+          <thead className="bg-muted/70 text-left">
             <tr>
               <th scope="col" className="px-3 py-2 font-medium">
                 {t("tokenName")}

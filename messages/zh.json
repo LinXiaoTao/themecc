@@ -34,6 +34,7 @@
     "source": "GitHub 源码"
   },
   "Home": {
+    "eyebrow": "非官方 · 开源",
     "heading": "Claude Code 主题,带预览,一条命令安装",
     "lead": "收录桌面版动画主题和 CLI 配色主题。每个条目都标明版本要求,桌面 mod 还会标明使用的权限。",
     "addMarketplaceTitle": "先添加一次 ThemeCC",

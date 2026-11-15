@@ -21,7 +21,10 @@ export function InstallBlock({ theme }: Props) {
   const type = theme.type;
 
   return (
-    <section aria-labelledby="install-heading" className="space-y-4">
+    <section
+      aria-labelledby="install-heading"
+      className="space-y-5 self-start rounded-2xl border border-border bg-card p-6 shadow-card"
+    >
       <h2 id="install-heading" className="text-xl font-semibold">
         {t("install")}
       </h2>
@@ -61,7 +64,7 @@ export function InstallBlock({ theme }: Props) {
         </p>
       </div>
       {theme.type === "cli" ? (
-        <details className="rounded-lg border border-border p-4">
+        <details className="rounded-xl border border-border bg-muted/40 p-4">
           <summary className="cursor-pointer text-sm font-medium">
             {t("singleFileHeading")}
           </summary>

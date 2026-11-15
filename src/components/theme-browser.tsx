@@ -28,8 +28,8 @@ function Chip({ active, label, onSelect }: ChipProps) {
       aria-pressed={active}
       className={
         active
-          ? "rounded-full border border-foreground bg-foreground px-3 py-1 text-sm text-background"
-          : "rounded-full border border-border px-3 py-1 text-sm hover:bg-muted"
+          ? "rounded-full border border-foreground bg-foreground px-3.5 py-1 text-sm font-medium text-background"
+          : "rounded-full border border-border bg-card px-3.5 py-1 text-sm transition-colors hover:border-foreground/30 hover:bg-muted"
       }
     >
       {label}
@@ -67,7 +67,7 @@ export function ThemeBrowser({ themes, showMotionFilter }: Props) {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap gap-x-8 gap-y-3">
+      <div className="flex flex-wrap items-center gap-x-8 gap-y-3 rounded-2xl border border-border bg-card px-4 py-3 shadow-sm">
         <fieldset className="flex min-w-0 flex-wrap items-center gap-2">
           <legend className="float-left mr-2 text-sm text-muted-foreground">
             {t("filterScheme")}
@@ -111,15 +111,18 @@ export function ThemeBrowser({ themes, showMotionFilter }: Props) {
           </fieldset>
         ) : null}
       </div>
-      <p className="text-sm text-muted-foreground" aria-live="polite">
+      <p
+        className="font-mono text-xs uppercase tracking-wide text-muted-foreground"
+        aria-live="polite"
+      >
         {t("results", { count: visible.length })}
       </p>
       {visible.length === 0 ? (
-        <p className="rounded-lg border border-dashed border-border p-8 text-center text-muted-foreground">
+        <p className="rounded-2xl border border-dashed border-border p-10 text-center text-muted-foreground">
           {themes.length === 0 ? t("emptyRegistry") : t("empty")}
         </p>
       ) : (
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((theme, index) => (
             <li key={theme.slug} className="flex">
               <ThemeCard theme={theme} priority={index < 3} />

@@ -1,0 +1,19 @@
+type Props = {
+  className?: string;
+};
+
+export function LogoMark({ className = "size-7" }: Props) {
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+    >
+      <rect width="64" height="64" rx="14" fill="#c4572d" />
+      <g stroke="#fff" strokeWidth="5" strokeLinecap="round">
+        <path d="M32 13v38M13 32h38M18.5 18.5l27 27M45.5 18.5l-27 27" />
+      </g>
+    </svg>
+  );
+}

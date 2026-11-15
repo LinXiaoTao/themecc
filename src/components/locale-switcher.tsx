@@ -18,7 +18,10 @@ export function LocaleSwitcher({ label }: Props) {
   const current = useLocale();
   const pathname = usePathname();
   return (
-    <nav aria-label={label} className="flex items-center gap-1 text-sm">
+    <nav
+      aria-label={label}
+      className="flex items-center gap-0.5 rounded-full border border-border bg-card p-0.5 text-xs"
+    >
       {routing.locales.map((locale) => (
         <NextLink
           key={locale}
@@ -28,8 +31,8 @@ export function LocaleSwitcher({ label }: Props) {
           aria-current={locale === current ? "true" : undefined}
           className={
             locale === current
-              ? "rounded px-2 py-1 font-medium text-foreground"
-              : "rounded px-2 py-1 text-muted-foreground hover:text-foreground"
+              ? "rounded-full bg-foreground px-2.5 py-1 font-medium text-background"
+              : "rounded-full px-2.5 py-1 text-muted-foreground transition-colors hover:text-foreground"
           }
         >
           {LABELS[locale] ?? locale}
