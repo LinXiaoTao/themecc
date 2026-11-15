@@ -1,0 +1,13 @@
+{
+  "description": {
+    "en": "Warm ember orange on a brown-gray palette, with olive success and a soft coral for errors.",
+    "zh": "暖橙色强调色,搭配棕灰色调、橄榄绿成功色和柔和的珊瑚红错误色。"
+  },
+  "author": {
+    "name": "LinXiaoTao",
+    "github": "LinXiaoTao"
+  },
+  "license": "MIT",
+  "tags": ["orange", "warm", "dark"],
+  "addedAt": "2026-11-15"
+}
