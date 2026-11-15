@@ -104,7 +104,7 @@ CLI 主题 `registry/cli/<slug>/theme.json` 使用 Claude Code 官方格式 `{ n
 
 1. 作者 fork,在 `registry/` 下添加目录,运行 `pnpm registry:check`。
 2. PR 触发 `ci.yml`:schema 校验(`registry:check`);远程校验(`registry:check:remote`:sha 在目标仓库存在、仓库公开、许可证符合);预览文件存在且体积合规(视频 ≤ 8 MB、≤ 15 秒,poster ≤ 300 KB)。本机未安装 `claude` CLI,`claude plugin validate` 暂未纳入 CI。
-3. CLI 主题:`registry-automerge.yml` 只对「全部文件都是新增、且路径为 `registry/cli/<slug>/(theme|meta).json`」的 PR 启用 auto-merge。修改已有条目或改动其他路径的 PR 一律人工审核。该 workflow 使用 `pull_request_target`,只通过 API 读取文件路径,不检出也不执行 PR 的代码。auto-merge 需要仓库开启 Allow auto-merge,并在 `main` 上把 `check` 设为必需检查,这两项是仓库设置,需要用户确认后再改。
+3. CLI 主题:`registry-automerge.yml` 在 `ci` 对 PR 的最新提交成功后触发(`workflow_run`),只合并「全部文件都是新增、且路径为 `registry/cli/<slug>/(theme|meta).json`」的 PR(`src/lib/registry/pr-eligibility.ts`,有单元测试)。修改已有条目或改动其他路径的 PR 一律人工审核。该 workflow 从默认分支运行并带写权限,所以不检出也不执行 PR 的代码,只通过 API 读取文件路径,并用 `--match-head-commit` 防止合并之后又被推送的新提交。不依赖 auto-merge 仓库设置和分支保护:开启必需检查后,`registry-sync` 机器人用 `GITHUB_TOKEN` 推送 `main` 会被拒绝。GitHub 默认要求首次贡献者的 fork PR 先由维护者点击批准才运行 CI,保持这个默认值。
 4. 桌面 mod:`CODEOWNERS` 要求 owner 审核,按清单检查网络请求、文件读写、命令执行、混淆代码,通过才合并。
 5. 合并后 `registry-sync.yml` 重新生成 marketplace 并以 `leo <linxiaotao1993@gmail.com>` 提交。合并提交的作者是投稿者,不一定是 Vercel 团队成员,可能触发 BLOCKED;机器人的提交是 main 上最新的一个,由它完成部署。因此每次投稿合并会产生两次部署。
 
